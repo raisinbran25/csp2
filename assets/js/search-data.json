@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "First Notebook",
-            "content": "{ “cells”: [ { “cell_type”: “markdown”, “metadata”: {}, “source”: [ “# My first post n”, “ n”, “Hi! My name is Jaden Nguyen, and I am excited to learn more about computer science in this course. Here is my github if you want to check out the code. Below is some simple python code. n” ] }, { “cell_type”: “code”, “execution_count”: 10, “metadata”: {}, “outputs”: [ { “name”: “stdout”, “output_type”: “stream”, “text”: [ “Hello n” ] } ], “source”: [ “var = &quot;Hello&quot; n”, “print(var)” ] } ], “metadata”: { “kernelspec”: { “display_name”: “Python 3.10.4 64-bit”, “language”: “python”, “name”: “python3” }, “language_info”: { “codemirror_mode”: { “name”: “ipython”, “version”: 3 }, “file_extension”: “.py”, “mimetype”: “text/x-python”, “name”: “python”, “nbconvert_exporter”: “python”, “pygments_lexer”: “ipython3”, “version”: “3.10.4” }, “orig_nbformat”: 4, “vscode”: { “interpreter”: { “hash”: “916dbcbb3f70747c44a77c7bcd40155683ae19c65e1c03b4aa3499c5328201f1” } } }, “nbformat”: 4, “nbformat_minor”: 2 } .",
-            "url": "https://raisinbran25.github.io/csp2/2022/08/21/first-notebook.ipynb",
-            "relUrl": "/2022/08/21/first-notebook.ipynb",
+            "title": "My first post",
+            "content": "var = &quot;Hello&quot; print(var) . Hello .",
+            "url": "https://raisinbran25.github.io/csp2/2022/08/21/first-notebook.html",
+            "relUrl": "/2022/08/21/first-notebook.html",
             "date": " • Aug 21, 2022"
         }
         
