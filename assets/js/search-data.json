@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "My first jupyter notebook",
-            "content": "var = &quot;Hello&quot; print (var) .",
+            "content": "Below is some python code for my first jupyter notebook. . var = &quot;Hello&quot; print (var) .",
             "url": "https://raisinbran25.github.io/csp2/2022/08/21/jupyter-notebook.html",
             "relUrl": "/2022/08/21/jupyter-notebook.html",
             "date": " • Aug 21, 2022"
