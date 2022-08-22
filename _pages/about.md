@@ -1,12 +1,10 @@
 ---
 layout: page
 title: About Me
-image: images/ye.jpg
 permalink: /about/
 ---
 
 Hi! My name is Jaden Nguyen. I like to learn about computers.
-
 
 
 
