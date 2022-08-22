@@ -1,3 +1,15 @@
-# "My First Post"
-Here is my first post
-[link](url)
+---
+toc: true
+layout: post
+description: my first post on this website
+categories: [markdown]
+title: my first post
+---
+# jaden nguyen's first post
+
+## introduction
+
+Hi! My name is **Jaden Nguyen**, and I am excited to learn more about computer science in this course. Here is *my* [github](https://github.com/raisinbran25/csp2) if you want to check out the code.
+
+
+
