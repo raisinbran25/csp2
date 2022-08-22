@@ -1,10 +1,12 @@
 ---
 layout: page
 title: About Me
+image: images/ye.jpg
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+Hi! My name is Jaden Nguyen. I like to learn about computers.
+
 
 
 
