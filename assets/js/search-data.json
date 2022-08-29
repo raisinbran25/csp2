@@ -91,7 +91,14 @@
   
 
   
-
+      ,"page2": {
+          "title": "Vocab",
+          "content": "Vocab from this year: . sequence: two or more lines of code def: defines the actions of a python function bash: a shell found in linux .",
+          "url": "https://raisinbran25.github.io/csp2/vocab/",
+          "relUrl": "/vocab/",
+          "date": ""
+      }
+      
   
 
   
@@ -99,6 +106,7 @@
   
 
   
+
   
 
   
@@ -114,7 +122,10 @@
   
 
   
-      ,"page11": {
+  
+
+  
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://raisinbran25.github.io/csp2/robots.txt",
