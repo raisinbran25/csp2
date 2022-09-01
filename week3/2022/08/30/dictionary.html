@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -133,6 +133,14 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here, information is manually put into a dictionary called InfoDb. I then created a function, collect_data, that takes input and puts it into the dictionary. Next, I created another function, more_info, that allows the user to input multiple values into keys into the dictionary until they are satisfied. Lastly, the contents of the dictionary are output.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -185,23 +193,26 @@ window.onload = wrap_img;
     <span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What is your age? "</span><span class="p">)</span>
     <span class="n">car</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What cars do you own? "</span><span class="p">)</span>
     <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-        <span class="s2">"FirstName"</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">fn</span><span class="p">),</span>
-        <span class="s2">"LastName"</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">ln</span><span class="p">),</span>
-        <span class="s2">"DOB"</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">dob</span><span class="p">),</span>
-        <span class="s2">"Residence"</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">res</span><span class="p">),</span>
-        <span class="s2">"Email"</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">eml</span><span class="p">),</span>
-        <span class="s2">"Age"</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">),</span>
+        <span class="s2">"FirstName"</span><span class="p">:</span> <span class="n">fn</span><span class="p">,</span>
+        <span class="s2">"LastName"</span><span class="p">:</span> <span class="n">ln</span><span class="p">,</span>
+        <span class="s2">"DOB"</span><span class="p">:</span> <span class="n">dob</span><span class="p">,</span>
+        <span class="s2">"Residence"</span><span class="p">:</span> <span class="n">res</span><span class="p">,</span>
+        <span class="s2">"Email"</span><span class="p">:</span> <span class="n">eml</span><span class="p">,</span>
+        <span class="s2">"Age"</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
         <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="n">car</span><span class="p">]</span>
     <span class="p">})</span>
 
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">ans</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Do you want to add more info to the database? "</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">ans</span> <span class="o">==</span> <span class="s2">"yes"</span><span class="p">:</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="kc">True</span>
-        <span class="n">collect_data</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">break</span>
+<span class="k">def</span> <span class="nf">more_info</span><span class="p">():</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">ans</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Do you want to add more info to the database? "</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ans</span> <span class="o">==</span> <span class="s2">"yes"</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">collect_data</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+
+<span class="n">more_info</span><span class="p">()</span>
 
 <span class="c1"># Print the data structure</span>
 <span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
@@ -226,9 +237,61 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+For loop output
+
+Here is the information for John Mortensen:
+	 Birth Day: October 21
+	 Residence: San Diego
+	 Email: jmortensen@powayusd.com
+	 Age: 
+	 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac
+
+Here is the information for Sunny Naidu:
+	 Birth Day: August 2
+	 Residence: Temecula
+	 Email: snaidu@powayusd.com
+	 Age: 
+	 Cars: 4Runner
+
+Here is the information for Jaden Nguyen:
+	 Birth Day: March 16
+	 Residence: San Diego
+	 Email: jadenn372@gmail.com
+	 Age: 
+	 Cars: AMDB5
+
+Here is the information for jacques webster:
+	 Birth Day: jan 1
+	 Residence: 90210
+	 Email: tscott@email.com
+	 Age: 31
+	 Cars: batmobile
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Below, I used index to list an album's place in its discography.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -236,22 +299,31 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"rodeo"</span><span class="p">,</span> <span class="s2">"birds in the trap sing mcknight"</span><span class="p">,</span> <span class="s2">"astroworld"</span><span class="p">]</span>
-<span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"first"</span><span class="p">,</span> <span class="s2">"second"</span><span class="p">,</span> <span class="s2">"third"</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"rodeo"</span><span class="p">,</span> <span class="s2">"birds in the trap sing mcknight"</span><span class="p">,</span> <span class="s2">"astroworld"</span><span class="p">,</span> <span class="s2">"utopia"</span><span class="p">]</span>
 
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">place</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"do you want to know the first, second, third album, or exit? "</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">place</span> <span class="o">==</span> <span class="s2">"exit"</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"bye"</span><span class="p">)</span>
-        <span class="n">exit</span><span class="p">()</span>
-    <span class="k">elif</span> <span class="n">place</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">order</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"not a valid response"</span><span class="p">)</span> 
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">order</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">place</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"the "</span> <span class="o">+</span> <span class="n">place</span> <span class="o">+</span> <span class="s2">" album is "</span> <span class="o">+</span> <span class="nb">list</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="s2">" is album number "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" in the discography."</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>rodeo is album number 1 in the discography.
+birds in the trap sing mcknight is album number 2 in the discography.
+astroworld is album number 3 in the discography.
+utopia is album number 4 in the discography.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
