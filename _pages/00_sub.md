@@ -4,4 +4,4 @@ title: sub
 permalink: /sub/
 ---
 
-test
+["javascript notebook"](https://raisinbran25.github.io/csp2/2022/09/22/javascript.html)
