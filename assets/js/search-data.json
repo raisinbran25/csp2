@@ -13,8 +13,8 @@
   
     
         ,"post1": {
-            "title": "Javascript",
-            "content": "In javascript, I made a for loop that prints an array of grocery items. . groceries = [&quot;apples&quot;, &quot;eggs&quot;, &quot;milk&quot;]; for (i = 0; i &lt; groceries.length; i++) console.log(&quot;make sure to buy &quot; + groceries[i]); . make sure to buy apples make sure to buy eggs make sure to buy milk .",
+            "title": "JavaScript",
+            "content": "Using javascript, I made a for loop that prints an array of grocery items. . groceries = [&quot;apples&quot;, &quot;eggs&quot;, &quot;milk&quot;]; for (i = 0; i &lt; groceries.length; i++) console.log(&quot;make sure to buy &quot; + groceries[i]); . make sure to buy apples make sure to buy eggs make sure to buy milk .",
             "url": "https://raisinbran25.github.io/csp2/week5/2022/09/22/javascript.html",
             "relUrl": "/week5/2022/09/22/javascript.html",
             "date": " • Sep 22, 2022"
