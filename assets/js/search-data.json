@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Table",
-            "content": "",
+            "content": "&lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &quot;include head.html&quot; &lt;body&gt; &quot;include header.html&quot; &lt;main class=&quot;page-content&quot; aria-label=&quot;Content&quot;&gt; &lt;div class=&quot;wrapper&quot;&gt; &quot;content&quot; &lt;/div&gt; &lt;/main&gt; &quot;include footer.html&quot; &lt;/body&gt; &lt;/html&gt; .",
             "url": "https://raisinbran25.github.io/csp2/2022/09/23/table.html",
             "relUrl": "/2022/09/23/table.html",
             "date": " • Sep 23, 2022"
