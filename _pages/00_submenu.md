@@ -1,6 +1,6 @@
 ---
 layout: page
-title: submenu
+title: Submenu
 permalink: /submenu/
 ---
 
