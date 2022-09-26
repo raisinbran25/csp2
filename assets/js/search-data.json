@@ -180,10 +180,10 @@
   
   
       ,"page0": {
-          "title": "sub",
-          "content": "javascript notebook post .",
-          "url": "https://raisinbran25.github.io/csp2/sub/",
-          "relUrl": "/sub/",
+          "title": "submenu",
+          "content": "Submenu . javascript notebook | post | .",
+          "url": "https://raisinbran25.github.io/csp2/submenu/",
+          "relUrl": "/submenu/",
           "date": ""
       }
       
