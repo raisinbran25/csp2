@@ -260,19 +260,16 @@
   
 
   
-
+      ,"page6": {
+          "title": "API",
+          "content": "API |   |   | .",
+          "url": "https://raisinbran25.github.io/csp2/API/",
+          "relUrl": "/API/",
+          "date": ""
+      }
+      
   
 
-  
-  
-
-  
-  
-
-  
-  
-
-  
   
 
   
@@ -281,7 +278,21 @@
   
 
   
-      ,"page14": {
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+      ,"page15": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://raisinbran25.github.io/csp2/robots.txt",
