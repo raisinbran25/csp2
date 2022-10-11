@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      49 min read
+      48 min read
     
 </span></p>
 
@@ -164,50 +164,6 @@ window.onload = wrap_img;
 <span class="n">json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="p">)</span>
-
-<span class="c1"># This code looks for "world data"</span>
-<span class="c1">#print("Names")</span>
-<span class="c1">#name = response.json().get('name_total')  # turn response to json() so we can extract "world_total"</span>
-<span class="c1">#for key, value in name.items():  # this finds key, value pairs in country</span>
-<span class="c1">#    print(key, value)</span>
-
-<span class="c1">#print()</span>
-
-<span class="c1"># This code looks for USA in "countries_stats"</span>
-<span class="c1">#print("Country Totals")</span>
-<span class="c1">#countries = response.json().get('countries_stat')</span>
-<span class="c1">#for country in countries:  # countries is a list</span>
-<span class="c1">#    if country["country_name"] == "USA":  # this filters for USA</span>
-<span class="c1">#        for key, value in country.items():  # this finds key, value pairs in country</span>
-<span class="c1">#            print(key, value)</span>
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"JSON data is Python type: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">json</span><span class="p">)))</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># Extracting Coins JSON status, if the API worked</span>
-        <span class="n">status</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'status'</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"API status: "</span> <span class="o">+</span> <span class="n">status</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">()</span>
-        
-        <span class="c1"># Extracting Coins JSON data, data about the coins</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'data'</span><span class="p">)</span>
-        
-        <span class="c1"># Procedural abstraction of Print code for coins</span>
-        <span class="k">def</span> <span class="nf">print_coin</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">"symbol"</span><span class="p">],</span> <span class="n">c</span><span class="p">[</span><span class="s2">"price"</span><span class="p">])</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"Icon Url: "</span> <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="s2">"iconUrl"</span><span class="p">])</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"Rank Url: "</span> <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="s2">"coinrankingUrl"</span><span class="p">])</span>
-
-        <span class="c1"># Coins data was observed to be a list</span>
-        <span class="k">for</span> <span class="n">coin</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">'coins'</span><span class="p">]:</span>
-            <span class="n">print_coin</span><span class="p">(</span><span class="n">coin</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">()</span>
-            
-    <span class="k">except</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Did you insert a valid key in X-RapidAPI-Key of API cell above?"</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="p">)</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"This cell is dependent on running API call in cell above!"</span><span class="p">)</span>
 </pre></div>
 
     </div>
