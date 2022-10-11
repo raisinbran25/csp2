@@ -214,7 +214,7 @@
   
       ,"page0": {
           "title": "Submenu",
-          "content": "JavaScript Notebook | JavaScipt/HTML Table | .",
+          "content": "JavaScript Notebook | JavaScipt/HTML Table | API | .",
           "url": "https://raisinbran25.github.io/csp2/submenu/",
           "relUrl": "/submenu/",
           "date": ""
@@ -260,17 +260,6 @@
   
 
   
-      ,"page6": {
-          "title": "API",
-          "content": "API |   |   | .",
-          "url": "https://raisinbran25.github.io/csp2/API/",
-          "relUrl": "/API/",
-          "date": ""
-      }
-      
-  
-
-  
 
   
 
@@ -292,7 +281,7 @@
   
 
   
-      ,"page15": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://raisinbran25.github.io/csp2/robots.txt",
