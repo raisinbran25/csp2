@@ -41,6 +41,7 @@ minima:
   skin: dark
 
 
+
 # Set this to true to get LaTeX math equation support
 use_math: 
 
