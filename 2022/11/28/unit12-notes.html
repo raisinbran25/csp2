@@ -160,7 +160,8 @@ w get</li>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"the index of "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" is "</span><span class="p">)</span>
+            <span class="n">ind</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"the index of "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" is "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ind</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">continue</span>
     <span class="k">else</span><span class="p">:</span>
@@ -177,14 +178,14 @@ w get</li>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>the index of 104 is 
-the index of 101 is 
-the index of 105 is 
-the index of 103 is 
-the index of 107 is 
-the index of 106 is 
-the index of 102 is 
-the index of 108 is 
+<pre>the index of 104 is 0
+the index of 101 is 1
+the index of 105 is 3
+the index of 103 is 5
+the index of 107 is 7
+the index of 106 is 10
+the index of 102 is 11
+the index of 108 is 12
 </pre>
 </div>
 </div>
@@ -244,7 +245,7 @@ the index of 108 is
 
 <span class="n">album</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"enter an album number"</span><span class="p">)</span>
 <span class="n">song</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"enter a song number"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">albums</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">album</span><span class="p">)][</span><span class="nb">int</span><span class="p">(</span><span class="n">song</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">albums</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">album</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">song</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -257,7 +258,7 @@ the index of 108 is
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Bad Company
+<pre>Mayhem
 </pre>
 </div>
 </div>
