@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "Unit 5-7 notes",
+            "title": "Unit 5-7 hacks",
             "content": "Notes . -Boolean operators produce booleans after a comaprison -relational operators work between two values of same type(operands) -AND: true true -OR: true false/ false true -NOT: false -algorithm: set of instructions that accomplish a task -selection: proccess determining what to do based on a condition -if/else statements are selction -nested conditionals: condtion in condition . Homework/Hacks . our homework we have decided for a decimal number to binary converter. You must use conditional statements within your code and have a input box for where the decimal number will go. This will give you a 2.7 out of 3 and you may add anything else to the code to get above a 2.7. . Below is an example of decimal number to binary converter which you can use as a starting template. . def convert(dec): bin = &quot;&quot; i = 100 while i &gt;= 0: if int(dec) % (2**i) == dec: bin = bin + &quot;0&quot; i -= 1 else: bin = bin + &quot;1&quot; dec -= 2**i i -= 1 j = 0 while int(bin[j]) == 0: j += 1 bin = bin[j:len(bin)] print(bin) var = int(input(&quot;Choose a number to convert: &quot;)) convert(var) . 1000101 .",
             "url": "https://raisinbran25.github.io/csp2/week%2013/2022/11/30/unit57.html",
             "relUrl": "/week%2013/2022/11/30/unit57.html",
