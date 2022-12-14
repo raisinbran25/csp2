@@ -153,8 +153,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="n">days_dictionary</span> <span class="o">=</span> <span class="p">{</span>
     <span class="mi">1</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span>
@@ -171,7 +170,33 @@ window.onload = wrap_img;
     <span class="mi">12</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="c1"># expected output shown below (or something similar)</span>
+
+<span class="n">uday</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"input a day"</span><span class="p">))</span>
+<span class="n">umonth</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"input a month"</span><span class="p">))</span>
+<span class="n">year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"input a year"</span><span class="p">))</span>
+<span class="n">udate</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">umonth</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">uday</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">udate</span><span class="p">)</span>
+
+<span class="n">rmonth</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">rdayrange</span> <span class="o">=</span> <span class="n">days_dictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">rmonth</span><span class="p">)</span>
+<span class="n">rday</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">rdayrange</span><span class="p">)</span>
+<span class="n">rdate</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">rmonth</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rday</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rdate</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">absdays</span><span class="p">(</span><span class="n">month</span><span class="p">,</span><span class="n">day</span><span class="p">):</span>
+    <span class="nb">abs</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">month</span><span class="p">):</span>
+        <span class="nb">abs</span> <span class="o">+=</span> <span class="p">(</span><span class="n">days_dictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+
+    <span class="nb">abs</span> <span class="o">+=</span> <span class="n">day</span>
+    <span class="k">return</span><span class="p">(</span><span class="nb">abs</span><span class="p">)</span>
+
+<span class="n">uabs</span> <span class="o">=</span> <span class="n">absdays</span><span class="p">(</span><span class="n">umonth</span><span class="p">,</span><span class="n">uday</span><span class="p">)</span>
+<span class="n">rabs</span> <span class="o">=</span> <span class="n">absdays</span><span class="p">(</span><span class="n">rmonth</span><span class="p">,</span><span class="n">rday</span><span class="p">)</span>
+<span class="n">diff</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">uabs</span> <span class="o">-</span> <span class="n">rabs</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"there are "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" days between "</span> <span class="o">+</span> <span class="n">rdate</span> <span class="o">+</span> <span class="s2">" and "</span> <span class="o">+</span> <span class="n">udate</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -184,15 +209,9 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Input a day
-13
-Input a month
-7
-Input a year
-2010
-user day: 07/13/2010
-random day: 09/11/2010
-The number of days between the given range of dates is: 60
+<pre>6/7/2022
+2/27/2022
+there are 100 days between 2/27/2022 and 6/7/2022
 </pre>
 </div>
 </div>
