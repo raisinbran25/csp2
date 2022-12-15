@@ -4,9 +4,4 @@ title: Vocab
 permalink: /vocab/
 ---
 
-Vocab from this year:
-
-sequence: two or more lines of code  
-def: defines the actions of a python function  
-bash: a shell found in linux  
-
+[Combined Vocab](https://raisinbran25.github.io/csp2/2022/12/08/all-vocab.html)
