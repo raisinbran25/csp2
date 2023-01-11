@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -195,9 +195,10 @@ window.onload = wrap_img;
 <span class="c1"># -- A User represents the data we want to manage</span>
 <span class="k">class</span> <span class="nc">User</span><span class="p">:</span>    
     <span class="c1"># constructor of a User object, initializes the instance variables within object (self)</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">dob</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>    <span class="c1"># variables with self prefix become part of the object, </span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">=</span> <span class="n">dob</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
 
     <span class="c1"># a name getter method, extracts name from object</span>
@@ -223,6 +224,20 @@ window.onload = wrap_img;
     <span class="c1"># check if uid parameter matches user id in object, return boolean</span>
     <span class="k">def</span> <span class="nf">is_uid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">==</span> <span class="n">uid</span>
+
+    <span class="c1">######### a getter method, extracts email from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dob</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@uid</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dob</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">=</span> <span class="n">dob</span>
+        
+    <span class="c1">######## check if uid parameter matches user id in object, return boolean</span>
+    <span class="k">def</span> <span class="nf">is_dob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dob</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">==</span> <span class="n">dob</span>
     
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">password</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -265,11 +280,11 @@ window.onload = wrap_img;
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
 
     <span class="c1"># define user objects</span>
-    <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Thomas Edison'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'toby'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123toby'</span><span class="p">)</span>
-    <span class="n">u2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Nicholas Tesla'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'nick'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123nick'</span><span class="p">)</span>
-    <span class="n">u3</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Alexander Graham Bell'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'lex'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123lex'</span><span class="p">)</span>
-    <span class="n">u4</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Eli Whitney'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'eli'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123eli'</span><span class="p">)</span>
-    <span class="n">u5</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Hedy Lemarr'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'hedy'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123hedy'</span><span class="p">)</span>
+    <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Thomas Edison'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'toby'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="s1">'1/1/11'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123toby'</span><span class="p">)</span>
+    <span class="n">u2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Nicholas Tesla'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'nick'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="s1">'2/2/22'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123nick'</span><span class="p">)</span>
+    <span class="n">u3</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Alexander Graham Bell'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'lex'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="s1">'3/3/33'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123lex'</span><span class="p">)</span>
+    <span class="n">u4</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Eli Whitney'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'eli'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="s1">'4/4/44'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123eli'</span><span class="p">)</span>
+    <span class="n">u5</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Hedy Lemarr'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'hedy'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="s1">'5/5/55'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123hedy'</span><span class="p">)</span>
 
     <span class="c1"># put user objects in list for convenience</span>
     <span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">u4</span><span class="p">,</span> <span class="n">u5</span><span class="p">]</span>
@@ -313,21 +328,21 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Test 1, find user 3
-name: "Thomas Edison", id: "toby", psw: "sha256$KFm..."
-name: "Nicholas Tesla", id: "nick", psw: "sha256$gnW..."
-* name: "Alexander Graham Bell", id: "lex", psw: "sha256$KBG..."
-name: "Eli Whitney", id: "eli", psw: "sha256$kFf..."
-name: "Hedy Lemarr", id: "hedy", psw: "sha256$MHt..."
+name: "Thomas Edison", id: "toby", psw: "sha256$QX9..."
+name: "Nicholas Tesla", id: "nick", psw: "sha256$Le8..."
+* name: "Alexander Graham Bell", id: "lex", psw: "sha256$qCD..."
+name: "Eli Whitney", id: "eli", psw: "sha256$o6A..."
+name: "Hedy Lemarr", id: "hedy", psw: "sha256$UzM..."
 Test 2, change user 3
-name: "Thomas Edison", id: "toby", psw: "sha256$KFm..."
-name: "Nicholas Tesla", id: "nick", psw: "sha256$gnW..."
-* name: "John Mortensen", id: "jm1021", psw: "sha256$E8n..."
-name: "Eli Whitney", id: "eli", psw: "sha256$kFf..."
-name: "Hedy Lemarr", id: "hedy", psw: "sha256$MHt..."
+name: "Thomas Edison", id: "toby", psw: "sha256$QX9..."
+name: "Nicholas Tesla", id: "nick", psw: "sha256$Le8..."
+* name: "John Mortensen", id: "jm1021", psw: "sha256$7HZ..."
+name: "Eli Whitney", id: "eli", psw: "sha256$o6A..."
+name: "Hedy Lemarr", id: "hedy", psw: "sha256$UzM..."
 Test 3, make a dictionary
-[{"_name": "Thomas Edison", "_uid": "toby", "_password": "sha256$KFm6E005YSaRm2Cs$1affcd202fa3283a6af293f027ee7fb911285c13162d2df0897709feb50def12"}, {"_name": "Nicholas Tesla", "_uid": "nick", "_password": "sha256$gnWsQQmMAatMmGQQ$253786f1ab7c8bcd397f0b1a309e72d4fa403ef7ee3348bef1560b179d4bca8c"}, {"_name": "John Mortensen", "_uid": "jm1021", "_password": "sha256$E8nVUG0W9ht73vgu$f6a8268decdaaa6e102384f39d0c0f1dd337cf8abbe9360d2c78cdfe9af3068a"}, {"_name": "Eli Whitney", "_uid": "eli", "_password": "sha256$kFfpvOPBMAYnQ5dq$8c021062c4c7fc7c90d2a7d071cccb28127b2c426092b9e1263c504630a90d21"}, {"_name": "Hedy Lemarr", "_uid": "hedy", "_password": "sha256$MHtoNM7ug8tcvOvl$77c1afc2cfe4e976da313e944ceda933dcb22655c55e3aa9366c72a0024809ee"}]
+[{"_name": "Thomas Edison", "_uid": "toby", "_dob": "1/1/11", "_password": "sha256$QX9otb6oARvEprzq$37e4d8bec1a216aafecf34e30bcf659747b414c2eb6408d73207ddc8a43182ff"}, {"_name": "Nicholas Tesla", "_uid": "nick", "_dob": "2/2/22", "_password": "sha256$Le8MAo8hosFtQsI7$2ff20dc5497da724dd9d19126289be9964b0f6fac9ff13febe43357bd2dc70c5"}, {"_name": "John Mortensen", "_uid": "jm1021", "_dob": "3/3/33", "_password": "sha256$7HZ8gyBwQahJcmR3$a455147e6591a0e834850257bef039916f0360936e91f619bc01f4a2f43ffaad"}, {"_name": "Eli Whitney", "_uid": "eli", "_dob": "4/4/44", "_password": "sha256$o6AjV6MHmc1gGsCX$ff60b8075a9ae4ecc25eacddabb8663f7583c4e690962ff130abc50dfb67bb07"}, {"_name": "Hedy Lemarr", "_uid": "hedy", "_dob": "5/5/55", "_password": "sha256$UzMLjOTm79V1ou0a$08f6a01d5312e04d82d5182983e52668c3aa94dc14e9c22ff14f3a48391dadfd"}]
 Test 4, make a dictionary
-[{"_name": "Thomas Edison", "_uid": "toby", "_password": "sha256$KFm6E005YSaRm2Cs$1affcd202fa3283a6af293f027ee7fb911285c13162d2df0897709feb50def12"}, {"_name": "Nicholas Tesla", "_uid": "nick", "_password": "sha256$gnWsQQmMAatMmGQQ$253786f1ab7c8bcd397f0b1a309e72d4fa403ef7ee3348bef1560b179d4bca8c"}, {"_name": "John Mortensen", "_uid": "jm1021", "_password": "sha256$E8nVUG0W9ht73vgu$f6a8268decdaaa6e102384f39d0c0f1dd337cf8abbe9360d2c78cdfe9af3068a"}, {"_name": "Eli Whitney", "_uid": "eli", "_password": "sha256$kFfpvOPBMAYnQ5dq$8c021062c4c7fc7c90d2a7d071cccb28127b2c426092b9e1263c504630a90d21"}, {"_name": "Hedy Lemarr", "_uid": "hedy", "_password": "sha256$MHtoNM7ug8tcvOvl$77c1afc2cfe4e976da313e944ceda933dcb22655c55e3aa9366c72a0024809ee"}]
+[{"_name": "Thomas Edison", "_uid": "toby", "_dob": "1/1/11", "_password": "sha256$QX9otb6oARvEprzq$37e4d8bec1a216aafecf34e30bcf659747b414c2eb6408d73207ddc8a43182ff"}, {"_name": "Nicholas Tesla", "_uid": "nick", "_dob": "2/2/22", "_password": "sha256$Le8MAo8hosFtQsI7$2ff20dc5497da724dd9d19126289be9964b0f6fac9ff13febe43357bd2dc70c5"}, {"_name": "John Mortensen", "_uid": "jm1021", "_dob": "3/3/33", "_password": "sha256$7HZ8gyBwQahJcmR3$a455147e6591a0e834850257bef039916f0360936e91f619bc01f4a2f43ffaad"}, {"_name": "Eli Whitney", "_uid": "eli", "_dob": "4/4/44", "_password": "sha256$o6AjV6MHmc1gGsCX$ff60b8075a9ae4ecc25eacddabb8663f7583c4e690962ff130abc50dfb67bb07"}, {"_name": "Hedy Lemarr", "_uid": "hedy", "_dob": "5/5/55", "_password": "sha256$UzMLjOTm79V1ou0a$08f6a01d5312e04d82d5182983e52668c3aa94dc14e9c22ff14f3a48391dadfd"}]
 </pre>
 </div>
 </div>
@@ -402,20 +417,6 @@ Test 4, make a dictionary
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>18
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
