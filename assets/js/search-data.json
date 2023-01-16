@@ -524,22 +524,14 @@
   
 
   
-
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
+      ,"page6": {
+          "title": "Frontend",
+          "content": "Name Email Password Phone . | | | | Create | .",
+          "url": "https://raisinbran25.github.io/csp2/frontend/",
+          "relUrl": "/frontend/",
+          "date": ""
+      }
+      
   
 
   
@@ -550,7 +542,26 @@
   
 
   
-      ,"page16": {
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+  
+
+  
+      ,"page17": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://raisinbran25.github.io/csp2/robots.txt",

@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Calendar | Jaden Nguyen</title>
+<title>Frontend | Jaden Nguyen</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Calendar" />
+<meta property="og:title" content="Frontend" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Jaden’s fastpages website." />
 <meta property="og:description" content="Jaden’s fastpages website." />
-<link rel="canonical" href="https://raisinbran25.github.io/csp2/calendar/" />
-<meta property="og:url" content="https://raisinbran25.github.io/csp2/calendar/" />
+<link rel="canonical" href="https://raisinbran25.github.io/csp2/frontend/" />
+<meta property="og:url" content="https://raisinbran25.github.io/csp2/frontend/" />
 <meta property="og:site_name" content="Jaden Nguyen" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Calendar" />
+<meta property="twitter:title" content="Frontend" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Jaden’s fastpages website.","headline":"Calendar","url":"https://raisinbran25.github.io/csp2/calendar/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Jaden’s fastpages website.","headline":"Frontend","url":"https://raisinbran25.github.io/csp2/frontend/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/csp2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://raisinbran25.github.io/csp2/feed.xml" title="Jaden Nguyen" /><link rel="shortcut icon" type="image/x-icon" href="/csp2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,79 +72,24 @@ window.onload = wrap_img;
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Calendar</h1>
+    <h1 class="post-title">Frontend</h1>
   </header>
 
   <div class="post-content">
-    <h3 id="here-is-the-calendar-for-my-website">Here is the calendar for my website!</h3>
-
-<h2 id="august">August:</h2>
-
-<table>
-  <thead>
+    <table>
     <tr>
-      <th style="text-align: center">Week</th>
-      <th style="text-align: center">Sunday</th>
-      <th style="text-align: center">Monday</th>
-      <th style="text-align: center">Tuesday</th>
-      <th style="text-align: center">Wednesday</th>
-      <th style="text-align: center">Thursday</th>
-      <th style="text-align: center">Friday</th>
-      <th>Saturday</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">0</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"><a href="https://raisinbran25.github.io/csp2/week0/2022/08/21/first-post.html">First Post</a>, <a href="https://raisinbran25.github.io/csp2/week0/2022/08/21/jupyter-notebook.html">First Notebook</a></td>
-      <td> </td>
+        <th><label for="name">Name</label></th>
+        <th><label for="email">Email</label></th>
+        <th><label for="password">Password</label></th>
+        <th><label for="phone">Phone</label></th>
     </tr>
     <tr>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"><a href="https://raisinbran25.github.io/csp2/week1/2022/08/28/bash-hacks.html">Bash Hacks</a>, <a href="https://raisinbran25.github.io/csp2/week1/2022/08/28/quiz.html">Python Quiz</a>, <a href="https://raisinbran25.github.io/csp2/2022/08/28/picture.html">Post Image</a>, <a href="https://raisinbran25.github.io/csp2/2022/08/28/picture.html">.docx file</a></td>
-      <td> </td>
+        <td><input type="text" name="name" id="name" required="" /></td>
+        <td><input type="email" name="email" id="email" placeholder="abc@xyz.org" required="" /></td>
+        <td><input type="password" name="password" id="password" required="" /></td>
+        <td><input type="tel" name="phone_num" id="phone_num" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="999-999-9999" /></td>
+        <td><button onclick="create_User()">Create</button></td>
     </tr>
-    <tr>
-      <td style="text-align: center">2</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"><a href="https://raisinbran25.github.io/csp2/week2/2022/08/30/python-talk.html">Python Talk</a></td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"><a href="https://raisinbran25.github.io/csp2/week2/2022/09/01/html-hack.html">HTML Hacks</a></td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">3</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"><a href="https://raisinbran25.github.io/csp2/week3/2022/09/09/js-quiz.html">JavaScript Quiz</a> <a href="https://raisinbran25.github.io/csp2/week3/2022/09/09/cpt-blog.html">CPT Blog</a></td>
-      <td style="text-align: center"> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">4</td>
-      <td style="text-align: center"><a href="https://raisinbran25.github.io/csp2/week4/2022/09/12/flask-web-app.html">Flask Web App Hacks</a></td>
-      <td style="text-align: center"><a href="https://raisinbran25.github.io/csp2/week4/2022/09/13/focus-habits-hacks.html">Focus and Habits Hacks</a>,  <a href="https://youtu.be/8hVZ8HcuE1s">Video Presentation</a></td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td> </td>
-    </tr>
-  </tbody>
 </table>
 
   </div>
