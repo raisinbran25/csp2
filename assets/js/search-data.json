@@ -526,7 +526,7 @@
   
       ,"page6": {
           "title": "Frontend",
-          "content": "Name Email Password Phone . | | | | Create | .",
+          "content": "Name: . User ID: . Password: Verify Password: . Phone: . Birthday: . Create .",
           "url": "https://raisinbran25.github.io/csp2/frontend/",
           "relUrl": "/frontend/",
           "date": ""
