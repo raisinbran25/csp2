@@ -89,21 +89,6 @@ function create_User(){
     })
 }
 
-
-<table>
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>ID</th>
-    <th>Actions</th>
-  </tr>
-  </thead>
-  <tbody id="table">
-    <!-- javascript generated data -->
-  </tbody>
-</table>
-
-
 // Static json, this can be used to test data prior to API and Model being ready
 const json = '[{"_name": "Thomas Edison", "_uid": "toby"}, {"_name": "Nicholas Tesla", "_uid": "nick"}, {"_name": "John Mortensen", "_uid": "jm1021"}, {"_name": "Eli Whitney", "_uid": "eli"}, {"_name": "Hedy Lemarr", "_uid": "hedy"}]';
 
@@ -157,3 +142,15 @@ data.forEach(user => {
 });
 </script>
 
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>ID</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody id="table">
+    <!-- javascript generated data -->
+  </tbody>
+</table>
