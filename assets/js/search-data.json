@@ -535,22 +535,14 @@
   
 
   
-
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
+      ,"page7": {
+          "title": "Fetch",
+          "content": "Database API . Name ID .",
+          "url": "https://raisinbran25.github.io/csp2/fetch/",
+          "relUrl": "/fetch/",
+          "date": ""
+      }
+      
   
 
   
@@ -561,7 +553,26 @@
   
 
   
-      ,"page17": {
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+  
+
+  
+      ,"page18": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://raisinbran25.github.io/csp2/robots.txt",
