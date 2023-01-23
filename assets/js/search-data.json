@@ -537,7 +537,7 @@
   
       ,"page6": {
           "title": "Frontend",
-          "content": "Name: . User ID: . Password: . Birthday: . Create User .",
+          "content": "Name: . UID: . Password: . Birthday: . Create User .",
           "url": "https://raisinbran25.github.io/csp2/frontend/",
           "relUrl": "/frontend/",
           "date": ""
