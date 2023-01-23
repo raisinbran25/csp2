@@ -18,12 +18,6 @@ permalink: /frontend/
         <input type="password" name="password" id="password" required>
     </label></p>
     <p><label>
-        Phone:
-        <input type="tel" name="phone_num" id="phone_num"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            placeholder="999-999-9999">
-    </label></p>
-    <p><label>
         Birthday:
         <input type="date" name="dob" id="dob">
     </label></p>
