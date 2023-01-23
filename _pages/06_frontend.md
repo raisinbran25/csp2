@@ -22,7 +22,7 @@ permalink: /frontend/
         <input type="date" name="dob" id="dob">
     </label></p>
     <p>
-        <button>Create</button>
+        <button>Create User</button>
     </p>
 </form>
 
@@ -32,7 +32,6 @@ function create_User(){
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    const phone = document.getElementById("phone").value;
     const requestOptions = {
         method: 'POST',
         headers: {
