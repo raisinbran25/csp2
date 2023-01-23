@@ -16,8 +16,6 @@ permalink: /frontend/
     <p><label>
         Password:
         <input type="password" name="password" id="password" required>
-        Verify Password:
-        <input type="password" name="passwordV" id="passwordV" required>
     </label></p>
     <p><label>
         Phone:
