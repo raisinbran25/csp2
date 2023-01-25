@@ -78,8 +78,8 @@ window.onload = wrap_img;
 <style>
 /* class to create the calculator's container; uses CSS grid dsiplay to partition off buttons */
 .calculator-container { 
-    width: 90vw; /* this width and height is specified for mobile devices by default */
-    height: 80vh;
+    width: 100vw; /* this width and height is specified for mobile devices by default */
+    height: 100vh;
     margin: 0 auto;
 
     display: grid;
@@ -95,8 +95,8 @@ window.onload = wrap_img;
 */
 @media (min-width: 600px) { 
     .calculator-container {
-        width: 40vw;
-        height: 80vh;
+        width: 100vw;
+        height: 100vh;
     }
 }
 
@@ -129,7 +129,7 @@ window.onload = wrap_img;
 /* styling for the top bar which shows the results of the calculator */
 .calculator-output {
     /* note how the output instead takes up 4 columns and 1 row; essentially takes up the entirety of the first row */
-    grid-column: span 9;
+    grid-column: span 10;
     grid-row: span 1;
 
     border-radius: 10px;
