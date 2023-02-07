@@ -231,7 +231,7 @@ number of mines:<input type="text" id="button" value="">
 numines = null
 function enter() {
     input = document.getElementById("button").value
-    if (input > 0) {
+    if (input > 0 && input < 64) {
         numines = input
     }
 }
