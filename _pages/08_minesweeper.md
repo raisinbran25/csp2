@@ -146,7 +146,7 @@ description:
     All buttons have onclick JavaScript action
     All actions result in map-output.innerHTML change
 -->
-number of mines:<input type="text" id="button" value="">
+number of mines:<input type="text" id="button" value="#, 1-20">
     <button type="button" onclick="enter()">Enter</button>
 <div class="map-container">
     <div class="map-longbutton" id="reset" onclick="initialize()">click here to play!</div>
@@ -231,7 +231,7 @@ number of mines:<input type="text" id="button" value="">
 numines = null
 function enter() {
     input = document.getElementById("button").value
-    if (input > 0 && input < 64) {
+    if (input > 0 && input < 21) {
         numines = input
     }
 }
