@@ -115,7 +115,7 @@ description:
     width: 328px;
     height: 80px;
     border-radius: 0px;
-    background-color: #000000;
+    background-color: #808080;
     border: 0px solid black;
     font-size: 1.5fem;
 
