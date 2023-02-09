@@ -612,24 +612,14 @@
   
 
   
-
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
+      ,"page8": {
+          "title": "minesweeper",
+          "content": "number of mines: Enter . click here to play!",
+          "url": "https://raisinbran25.github.io/csp2/_pages/08_minesweeper.html",
+          "relUrl": "/_pages/08_minesweeper.html",
+          "date": ""
+      }
+      
   
 
   
@@ -640,7 +630,28 @@
   
 
   
-      ,"page19": {
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+      ,"page20": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://raisinbran25.github.io/csp2/robots.txt",
