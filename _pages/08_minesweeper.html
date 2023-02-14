@@ -228,6 +228,10 @@ function enter() {
         numines = input
     }
 }
+// score calculator
+function score() {
+    return String(Math.floor((numines ** 3) / (time / 1000)))
+}
 // timer code
 starttime = null
 finaltime = null
@@ -260,7 +264,7 @@ function updatetime() {
         hsec = String(hsec)
     }
     
-    document.getElementById("reset").innerHTML = "congratulations! you won with a time of " + min + ":" + sec + "." + hsec + "! click here to reset." 
+    document.getElementById("reset").innerHTML = "congratulations! you won with a time of " + min + ":" + sec + "." + hsec + "and a score of " + score() + "! click here to reset." 
 }
 
 // minesweeper code
