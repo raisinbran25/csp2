@@ -272,7 +272,7 @@ function updatetime() {
         hsec = String(hsec)
     }
     
-    document.getElementById("reset").innerHTML = "congratulations! you won with a time of " + min + ":" + sec + "." + hsec + "and a score of " + score() + "! click here to reset." 
+    document.getElementById("reset").innerHTML = "congratulations! you won with a time of " + min + ":" + sec + "." + hsec + " and a score of " + score() + "! click here to reset." 
 }
 
 // minesweeper code
