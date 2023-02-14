@@ -8,7 +8,7 @@ layout: default
 <table>
   <thead>
   <tr>
-    <th>username</th>
+    <th>name</th>
     <th>score</th>
   </tr>
   </thead>
@@ -21,8 +21,8 @@ layout: default
 
 <form action="javascript:create_user()">
     <p><label>
-        username:
-        <input type="text" name="username" id="username" required>
+        name:
+        <input type="text" name="name" id="name" required>
     </label></p>
     <p><label>
         score:
@@ -98,7 +98,7 @@ layout: default
     //Validate Password (must be 6-20 characters in len)
     //verifyPassword("click");
     const body = {
-        username: document.getElementById("username").value,
+        name: document.getElementById("name").value,
         score: document.getElementById("score").value,
     };
     const requestOptions = {
@@ -136,16 +136,16 @@ layout: default
 
   function add_row(data) {
     const tr = document.createElement("tr");
-    const username = document.createElement("td");
+    const name = document.createElement("td");
     const score = document.createElement("td");
   
 
     // obtain data that is specific to the API
-    username.innerHTML = data.username; 
+    name.innerHTML = data.name; 
     score.innerHTML = data.score; 
 
     // add HTML to container
-    tr.appendChild(username);
+    tr.appendChild(name);
     tr.appendChild(score);
 
     resultContainer.appendChild(tr);
