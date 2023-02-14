@@ -634,24 +634,14 @@
   
 
   
-
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
+      ,"page9": {
+          "title": "Database CRUD Operations",
+          "content": "Database API . username score . Create API . username: . score: . Create .",
+          "url": "https://raisinbran25.github.io/csp2/_pages/09_test.html",
+          "relUrl": "/_pages/09_test.html",
+          "date": ""
+      }
+      
   
 
   
@@ -662,7 +652,28 @@
   
 
   
-      ,"page20": {
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+      ,"page21": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://raisinbran25.github.io/csp2/robots.txt",
