@@ -230,7 +230,7 @@ function enter() {
 }
 // score calculator
 function score() {
-    return String(Math.floor((numines ** 3) / (time / 1000)))
+    return String(Math.floor((numines ** 3) / (initial / 1000)))
 }
 // timer code
 starttime = null
@@ -240,6 +240,7 @@ sec = 00
 hsec = 00
 function updatetime() {
     time = Math.floor((finaltime - starttime) / 10)
+    initialtime = time
     min = Math.floor(time / 6000)
     if (min < 10) {
         min = "0" + String(min)
