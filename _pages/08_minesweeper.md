@@ -237,7 +237,7 @@ function enter() {
 }
 // score calculator
 function score() {
-    return String(Math.floor((numines ** 3) / (initial / 1000)))
+    return String(Math.floor((numines ** 3) / (initialtime / 1000)))
 }
 // timer code
 starttime = null
