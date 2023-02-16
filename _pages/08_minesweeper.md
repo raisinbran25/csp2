@@ -7,8 +7,8 @@ description:
 <style>
 /* class to create the map's container; uses CSS grid dsiplay to partition off buttons */
 .map-container { 
-    width: 500px; /* this width and height is specified for mobile devices by default */
-    height: 500px;
+    width: 600px; /* this width and height is specified for mobile devices by default */
+    height: 600px;
     right: 50px;
 
     display: grid;
