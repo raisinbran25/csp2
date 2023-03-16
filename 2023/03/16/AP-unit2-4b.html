@@ -114,7 +114,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
-<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;files/sqlite.db&#39;</span> <span class="c1"># this is location of database</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;instance/sqlite.db&#39;</span> <span class="c1"># this is location of database</span>
 
 <span class="k">def</span> <span class="nf">schema</span><span class="p">():</span>
     
@@ -175,7 +175,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="c1"># Execute a SELECT statement to retrieve data from a table</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM albums&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="c1"># Print the results</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -188,10 +188,28 @@ window.onload = wrap_img;
     <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="n">read</span><span class="p">()</span>
+<span class="c1">#read()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1, &#39;ye&#39;, &#39;Kanye West&#39;, &#39;7&#39;, &#39;0&#39;, &#39;2018-01-01&#39;)
+(2, &#39;The Melodic Blue&#39;, &#39;Baby Keem&#39;, &#39;16&#39;, &#39;0&#39;, &#39;2021-01-01&#39;)
+(3, &#39;Heaven or Hell&#39;, &#39;Don Toliver&#39;, &#39;0&#39;, &#39;0&#39;, &#39;2021-01-01&#39;)
+(4, &#39;Afterlyfe&#39;, &#39;Yeat&#39;, &#39;0&#39;, &#39;0&#39;, &#39;2023-01-01&#39;)
+(5, &#39;watch&#39;, &#39;uzi&#39;, &#39;1&#39;, &#39;32143&#39;, &#39;2023-03-16&#39;)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -220,10 +238,11 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name:&quot;</span><span class="p">)</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your user id:&quot;</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your password&quot;</span><span class="p">)</span>
-    <span class="n">dob</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your date of birth &#39;YYYY-MM-DD&#39;&quot;</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the name:&quot;</span><span class="p">)</span>
+    <span class="n">artist</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the artist:&quot;</span><span class="p">)</span>
+    <span class="n">songs</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the songs&quot;</span><span class="p">)</span>
+    <span class="n">streams</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the streams&quot;</span><span class="p">)</span>
+    <span class="n">release</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the release date &#39;YYYY-MM-DD&#39;&quot;</span><span class="p">)</span>
     
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -233,11 +252,11 @@ window.onload = wrap_img;
 
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Execute an SQL command to insert data into a table</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO users (_name, _uid, _password, _dob) VALUES (?, ?, ?, ?)&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">dob</span><span class="p">))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO albums (_name, _artist, _songs, _streams, _release) VALUES (?, ?, ?, ?, ?)&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">artist</span><span class="p">,</span> <span class="n">songs</span><span class="p">,</span> <span class="n">streams</span><span class="p">,</span> <span class="n">release</span><span class="p">))</span>
         
         <span class="c1"># Commit the changes to the database</span>
         <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A new user record </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> has been created&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A new album </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> has been created&quot;</span><span class="p">)</span>
                 
     <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error while executing the INSERT:&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
@@ -254,6 +273,20 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A new user record backyard has been created
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -261,9 +294,9 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Updating-a-User-in-table-in-Sqlite.db">Updating a User in table in Sqlite.db<a class="anchor-link" href="#Updating-a-User-in-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses SQL UPDATE to modify password</p>
 <ul>
-<li>What does the hacked part do?</li>
-<li>Explain try/except, when would except occur?</li>
-<li>What code seems to be repeated in each of these examples to point, why is it repeated?</li>
+<li>What does the hacked part do? exposes insecure password that is less than two characters</li>
+<li>Explain try/except, when would except occur? try/except tries a block of code, if an error occurs the execept block runs.</li>
+<li>What code seems to be repeated in each of these examples to point, why is it repeated? success and fail seem to be repeated using if/else or try/except statements to improve user experience by confirming success or fail of request.</li>
 </ul>
 </blockquote>
 
@@ -280,13 +313,9 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter user id to update&quot;</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter updated password&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;hacked&quot;</span>
-        <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;gothackednewpassword123&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;successfully updated&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter name to update&quot;</span><span class="p">)</span>
+    <span class="n">streams</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter updated streams&quot;</span><span class="p">)</span>
+    <span class="n">songs</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter updated songs&quot;</span><span class="p">)</span>
 
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -296,12 +325,24 @@ window.onload = wrap_img;
 
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Execute an SQL command to update data in a table</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;UPDATE users SET _password = ? WHERE _uid = ?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">uid</span><span class="p">))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;UPDATE albums SET _streams = ? WHERE _name = ?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">streams</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># The uid was not found in the table</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was not found in the table&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No name </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> was not found in the table&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The row with user id </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> the password has been </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The row with name </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> the streams has been updated&quot;</span><span class="p">)</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error while executing the UPDATE:&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Execute an SQL command to update data in a table</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;UPDATE albums SET _songs = ? WHERE _name = ?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">songs</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># The uid was not found in the table</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No name </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> was not found in the table&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The row with name </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> the songs has been updated&quot;</span><span class="p">)</span>
             <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
     <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error while executing the UPDATE:&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
@@ -315,6 +356,21 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The row with name ye the streams has been updated
+The row with name ye the songs has been updated
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -343,7 +399,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter user id to delete&quot;</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter album to delete&quot;</span><span class="p">)</span>
 
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -352,13 +408,13 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DELETE FROM users WHERE _uid = ?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">uid</span><span class="p">,))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DELETE FROM albums WHERE _name = ?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,))</span>
         <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># The uid was not found in the table</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was not found in the table&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No name </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> was not found in the table&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="c1"># The uid was found in the table and the row was deleted</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The row with uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was successfully deleted&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The row with name </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> was successfully deleted&quot;</span><span class="p">)</span>
         <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
     <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error while executing the DELETE:&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
@@ -371,6 +427,20 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The row with name watch was successfully deleted
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -424,6 +494,29 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A new user record hot has been created
+(1, &#39;ye&#39;, &#39;Kanye West&#39;, &#39;1&#39;, &#39;6000&#39;, &#39;2018-01-01&#39;)
+(2, &#39;The Melodic Blue&#39;, &#39;Baby Keem&#39;, &#39;16&#39;, &#39;0&#39;, &#39;2021-01-01&#39;)
+(3, &#39;Heaven or Hell&#39;, &#39;Don Toliver&#39;, &#39;0&#39;, &#39;0&#39;, &#39;2021-01-01&#39;)
+(4, &#39;Afterlyfe&#39;, &#39;Yeat&#39;, &#39;0&#39;, &#39;0&#39;, &#39;2023-01-01&#39;)
+(6, &#39;backyard&#39;, &#39;travis scott&#39;, &#39;1&#39;, &#39;322&#39;, &#39;2014-03-04&#39;)
+(7, &#39;hot&#39;, &#39;gunna&#39;, &#39;1&#39;, &#39;02193824&#39;, &#39;2018-01-01&#39;)
+The row with name hot the streams has been updated
+The row with name hot the songs has been updated
+The row with name The Melodic Blue was successfully deleted
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -431,9 +524,9 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h1><ul>
 <li>Add this Blog to you own Blogging site.  In the Blog add notes and observations on each code cell.</li>
-<li>In this implementation, do you see procedural abstraction?</li>
+<li>In this implementation, do you see procedural abstraction? One example of procedural abstraction in 2.4b is the definition of create, read, update, delete seperately and then all called in a single function at the end.</li>
 <li>In 2.4a or 2.4b lecture<ul>
-<li>Do you see data abstraction?  Complement this with Debugging example.</li>
+<li>Do you see data abstraction?  Complement this with Debugging example. An example of data abstraction in 2.4b: the user is asked for the schema of an album that they want to update, but don't see the backend code in action that actually updates the database.</li>
 <li>Use Imperative or OOP style to Create a new Table or do something that applies to your CPT project.</li>
 </ul>
 </li>
