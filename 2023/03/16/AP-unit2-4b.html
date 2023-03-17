@@ -95,7 +95,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Schema-of-Users-table-in-Sqlite.db">Schema of Users table in Sqlite.db<a class="anchor-link" href="#Schema-of-Users-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses PRAGMA statement to read schema.</p>
 </blockquote>
-<p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a>- What is a database schema?</p>
+<p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a>- What is a database schema? the schema of a database contains the categories, or column names. examples are name, age, dob,</p>
 <ul>
 <li>What is the purpose of identity Column in SQL database?</li>
 <li>What is the purpose of a primary key in SQL database?</li>
@@ -188,7 +188,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="c1">#read()</span>
+<span class="n">read</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -201,11 +201,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, &#39;ye&#39;, &#39;Kanye West&#39;, &#39;7&#39;, &#39;0&#39;, &#39;2018-01-01&#39;)
-(2, &#39;The Melodic Blue&#39;, &#39;Baby Keem&#39;, &#39;16&#39;, &#39;0&#39;, &#39;2021-01-01&#39;)
-(3, &#39;Heaven or Hell&#39;, &#39;Don Toliver&#39;, &#39;0&#39;, &#39;0&#39;, &#39;2021-01-01&#39;)
-(4, &#39;Afterlyfe&#39;, &#39;Yeat&#39;, &#39;0&#39;, &#39;0&#39;, &#39;2023-01-01&#39;)
-(5, &#39;watch&#39;, &#39;uzi&#39;, &#39;1&#39;, &#39;32143&#39;, &#39;2023-03-16&#39;)
+<pre>(1, &#39;Watch&#39;, &#39;Lil Uzi Vert&#39;, &#39;1&#39;, &#39;100000&#39;, &#39;2018-01-01&#39;)
+(2, &#39;The Melodic Blue&#39;, &#39;Baby Keem&#39;, &#39;16&#39;, &#39;100000&#39;, &#39;2021-08-30&#39;)
+(3, &#39;Heaven or Hell&#39;, &#39;Don Toliver&#39;, &#39;7&#39;, &#39;100000&#39;, &#39;2019-06-09&#39;)
+(4, &#39;Afterlyfe&#39;, &#39;Yeat&#39;, &#39;21&#39;, &#39;100000&#39;, &#39;2023-01-05&#39;)
 </pre>
 </div>
 </div>
@@ -266,7 +265,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="c1">#create()</span>
+<span class="n">create</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -279,7 +278,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>A new user record backyard has been created
+<pre>A new album jaden has been created
 </pre>
 </div>
 </div>
@@ -352,7 +351,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="c1">#update()</span>
+<span class="n">update</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -365,8 +364,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The row with name ye the streams has been updated
-The row with name ye the songs has been updated
+<pre>The row with name jaden the streams has been updated
+The row with name jaden the songs has been updated
 </pre>
 </div>
 </div>
@@ -423,7 +422,7 @@ The row with name ye the songs has been updated
     <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="c1">#delete()</span>
+<span class="n">delete</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -436,7 +435,7 @@ The row with name ye the songs has been updated
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The row with name watch was successfully deleted
+<pre>The row with name jaden was successfully deleted
 </pre>
 </div>
 </div>
@@ -491,29 +490,6 @@ The row with name ye the songs has been updated
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>A new user record hot has been created
-(1, &#39;ye&#39;, &#39;Kanye West&#39;, &#39;1&#39;, &#39;6000&#39;, &#39;2018-01-01&#39;)
-(2, &#39;The Melodic Blue&#39;, &#39;Baby Keem&#39;, &#39;16&#39;, &#39;0&#39;, &#39;2021-01-01&#39;)
-(3, &#39;Heaven or Hell&#39;, &#39;Don Toliver&#39;, &#39;0&#39;, &#39;0&#39;, &#39;2021-01-01&#39;)
-(4, &#39;Afterlyfe&#39;, &#39;Yeat&#39;, &#39;0&#39;, &#39;0&#39;, &#39;2023-01-01&#39;)
-(6, &#39;backyard&#39;, &#39;travis scott&#39;, &#39;1&#39;, &#39;322&#39;, &#39;2014-03-04&#39;)
-(7, &#39;hot&#39;, &#39;gunna&#39;, &#39;1&#39;, &#39;02193824&#39;, &#39;2018-01-01&#39;)
-The row with name hot the streams has been updated
-The row with name hot the songs has been updated
-The row with name The Melodic Blue was successfully deleted
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
