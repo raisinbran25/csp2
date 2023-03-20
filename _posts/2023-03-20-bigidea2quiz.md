@@ -1,0 +1,17 @@
+---
+toc: true
+layout: post
+description:
+categories: [Week]
+title: Big Idea 2 Quiz
+---
+
+Question 7:
+Though the customer's phone number is collected, it isn't required to redirect a call. However, the phone number is not needed by the original system, which confused me.
+
+![q7](https://raw.githubusercontent.com/raisinbran25/csp2/master/images/mcq27.png)
+
+Question 45:
+Procedural abstraction is seperating code into sections, so it doesn't necessarily prevent programmers from plagirizing. However, like in functions, blocks of code can be named in procedural abstraction.
+
+![q245](https://raw.githubusercontent.com/raisinbran25/csp2/master/images/mcq245.png)
