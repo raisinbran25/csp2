@@ -370,7 +370,7 @@ The Man
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> 
     <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
 
 <span class="c1"># Write your own code to print tracks in readable format</span>
@@ -500,142 +500,90 @@ producer: {&#39;Taylor Swift&#39;, &#39;Joel Little&#39;, &#39;Jack Antonoff&#39
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">music</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="mi">1</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Rodeo&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;album&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;artists&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Travis Scott&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2015</span><span class="p">,</span>
-        <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Hip-hop&quot;</span><span class="p">,</span> <span class="s2">&quot;Trap&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="mi">1</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Pornography&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
-                <span class="p">},</span>
-            <span class="mi">2</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Oh My Dis Side&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Quavo&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">3</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;3500&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Future&quot;</span><span class="p">,</span> <span class="s2">&quot;2 Chainz&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">4</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Wasted&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Juicy J&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">5</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;90210&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Kacy Hill&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">6</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Pray 4 Love&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;The Weeknd&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">7</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Nightcrawler&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Swae Lee&quot;</span><span class="p">,</span> <span class="s2">&quot;Chief Keef&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">8</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Piss on Your Grave&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Kanye West&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">9</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Antidote&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
-                <span class="p">},</span>
-            <span class="mi">10</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Impossible&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
-                <span class="p">},</span>
-            <span class="mi">11</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Maria I&#39;m Drunk&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Young Thug&quot;</span><span class="p">,</span> <span class="s2">&quot;Justin Bieber&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">12</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Flying High&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Toro y Moi&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">13</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;I Can Tell&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
-                <span class="p">},</span>
-            <span class="mi">14</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Apple Pie&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
-                <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-
-    <span class="mi">2</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;JACKBOYS&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;album&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;artists&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;JACKBOYS&quot;</span><span class="p">,</span> <span class="s2">&quot;Travis Scott&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2019</span><span class="p">,</span>
-        <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Hip-hop&quot;</span><span class="p">,</span> <span class="s2">&quot;Trap&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="mi">1</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;HIGHEST IN THE ROOM&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ROSALIA&quot;</span><span class="p">,</span> <span class="s2">&quot;Lil Baby&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">2</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;JACKBOYS&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
-                <span class="p">},</span>
-            <span class="mi">3</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;GANG GANG&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Don Toliver&quot;</span><span class="p">,</span> <span class="s2">&quot;Sheck Wes&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">4</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;HAD ENOUGH&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Quavo&quot;</span><span class="p">,</span> <span class="s2">&quot;Offset&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">5</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;OUT WEST&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Young Thug&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">6</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;WHAT TO DO&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Don Toliver&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-            <span class="mi">7</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;GATTI&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Pop Smoke&quot;</span><span class="p">]</span>
-                <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-
-    <span class="mi">3</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Lemonade&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;single&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;artists&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Internet Money&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2020</span><span class="p">,</span>
-        <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Hip-hop&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="mi">1</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Lemonade&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Don Toliver&quot;</span><span class="p">,</span> <span class="s2">&quot;Nav&quot;</span><span class="p">,</span> <span class="s2">&quot;Gunna&quot;</span><span class="p">]</span>
-                <span class="p">}</span>
-        <span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rodeo</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Rodeo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Travis Scott&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2015</span><span class="p">,</span>
+    <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Hip-hop&quot;</span><span class="p">,</span> <span class="s2">&quot;Trap&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Pornography&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+            <span class="p">},</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Oh My Dis Side&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Quavo&quot;</span><span class="p">]</span>
+            <span class="p">},</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;3500&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Future&quot;</span><span class="p">,</span> <span class="s2">&quot;2 Chainz&quot;</span><span class="p">]</span>
+            <span class="p">},</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Wasted&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Juicy J&quot;</span><span class="p">]</span>
+            <span class="p">},</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;90210&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Kacy Hill&quot;</span><span class="p">]</span>
+            <span class="p">},</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Pray 4 Love&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;The Weeknd&quot;</span><span class="p">]</span>
+            <span class="p">},</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Nightcrawler&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Swae Lee&quot;</span><span class="p">,</span> <span class="s2">&quot;Chief Keef&quot;</span><span class="p">]</span>
+            <span class="p">},</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Piss on Your Grave&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Kanye West&quot;</span><span class="p">]</span>
+            <span class="p">},</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Antidote&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+            <span class="p">},</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Impossible&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+            <span class="p">},</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Maria I&#39;m Drunk&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Young Thug&quot;</span><span class="p">,</span> <span class="s2">&quot;Justin Bieber&quot;</span><span class="p">]</span>
+            <span class="p">},</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Flying High&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Toro y Moi&quot;</span><span class="p">]</span>
+            <span class="p">},</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;I Can Tell&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+            <span class="p">},</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Apple Pie&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+            <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="k">def</span> <span class="nf">user</span><span class="p">():</span>
-    <span class="n">allmusic</span><span class="p">()</span>
-    <span class="n">ui</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Which do you want to learn about: type, artists, year, genre, or tracks&quot;</span><span class="p">)</span>
 
+<span class="k">def</span> <span class="nf">rodeosearch</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;what would you like to know: title, artists, year, genre, or tracks&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;title&quot;</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;artist&quot;</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rodeo</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;genre&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">rodeo</span><span class="p">[</span><span class="s2">&quot;genre&quot;</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;tracks&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">rodeo</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;song&quot;</span><span class="p">])</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;what song would you like to know more about&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">rodeo</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;song&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">a</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;features&quot;</span><span class="p">]:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;features:&quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span>
+            
 
-<span class="k">def</span> <span class="nf">allmusic</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;all music titles:&quot;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">music</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>
-
-<span class="k">def</span> <span class="nf">allinfo</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">music</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-        
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">music</span><span class="p">))</span>
-<span class="n">allinfo</span><span class="p">(</span><span class="s2">&quot;Rodeo&quot;</span><span class="p">)</span>
+<span class="n">rodeosearch</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -648,10 +596,21 @@ producer: {&#39;Taylor Swift&#39;, &#39;Joel Little&#39;, &#39;Jack Antonoff&#39
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;dict&#39;&gt;
-1
-2
-3
+<pre>Pornography
+Oh My Dis Side
+3500
+Wasted
+90210
+Pray 4 Love
+Nightcrawler
+Piss on Your Grave
+Antidote
+Impossible
+Maria I&#39;m Drunk
+Flying High
+I Can Tell
+Apple Pie
+features:Juicy J
 </pre>
 </div>
 </div>
