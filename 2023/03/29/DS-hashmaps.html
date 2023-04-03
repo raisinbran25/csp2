@@ -86,13 +86,13 @@ window.onload = wrap_img;
 <h2 id="What-is-a-Hashtable/Hashmap?">What is a Hashtable/Hashmap?<a class="anchor-link" href="#What-is-a-Hashtable/Hashmap?"> </a></h2><blockquote><p>A hashtable is a data structure that with a collection of key-value pairs, where each key maps to a value, and the keys must be unique and hashable.</p>
 </blockquote>
 <ul>
-<li>In Python there is a built in hashtable known as a <strong><strong><strong>___</strong></strong></strong>.</li>
+<li>In Python there is a built in hashtable known as a dictionary.</li>
 </ul>
 <blockquote><p>The primary purpose of a hashtable is to provide efficient lookup, insertion, and deletion operations. When an element is to be inserted into the hashtable, a hash function is used to map the key to a specific index in the underlying array that is used to store the key-value pairs. The value is then stored at that index. When searching for a value, the hash function is used again to find the index where the value is stored.</p>
 <p>The key advantage of a hashtable over other data structures like arrays and linked lists is its average-case time complexity for lookup, insertion, and deletion operations.</p>
 </blockquote>
 <ul>
-<li>The typical time complexity of a hashtable is <strong><strong><strong>___</strong></strong></strong>. </li>
+<li>The typical time complexity of a hashtable is constant. </li>
 </ul>
 
 </div>
@@ -119,15 +119,29 @@ window.onload = wrap_img;
 <span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  
 
 <span class="c1"># What do you notice in the output?</span>
-<span class="c1">#</span>
+<span class="c1"># I notice that there are no duplicates, there is only one of each value.</span>
 <span class="c1">#</span>
 
 <span class="c1"># Why do you think Sets are in the same tech talk as Hashmaps/Hashtables?</span>
-<span class="c1">#</span>
+<span class="c1"># sets are similar to hashmaps/hashtables because there is only one of each output, unique</span>
 <span class="c1">#</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1, 2, 3}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -176,7 +190,7 @@ window.onload = wrap_img;
 <span class="p">}</span>
 
 <span class="c1"># What data structures do you see?</span>
-<span class="c1">#</span>
+<span class="c1">#I see a dictionary, and within the dictionary values, there are some lists.</span>
 <span class="c1">#</span>
 
 <span class="c1"># Printing the dictionary</span>
@@ -184,6 +198,20 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;title&#39;: &#39;Lover&#39;, &#39;artist&#39;: &#39;Taylor Swift&#39;, &#39;year&#39;: 2019, &#39;genre&#39;: [&#39;Pop&#39;, &#39;Synth-pop&#39;], &#39;tracks&#39;: {1: &#39;I Forgot That You Existed&#39;, 2: &#39;Cruel Summer&#39;, 3: &#39;Lover&#39;, 4: &#39;The Man&#39;, 5: &#39;The Archer&#39;, 6: &#39;I Think He Knows&#39;, 7: &#39;Miss Americana &amp; The Heartbreak Prince&#39;, 8: &#39;Paper Rings&#39;, 9: &#39;Cornelia Street&#39;, 10: &#39;Death By A Thousand Cuts&#39;, 11: &#39;London Boy&#39;, 12: &#34;Soon You&#39;ll Get Better (feat. Dixie Chicks)&#34;, 13: &#39;False God&#39;, 14: &#39;You Need To Calm Down&#39;, 15: &#39;Afterglow&#39;, 16: &#39;Me! (feat. Brendon Urie of Panic! At The Disco)&#39;, 17: &#34;It&#39;s Nice To Have A Friend&#34;, 18: &#39;Daylight&#39;}}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -206,6 +234,21 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1: &#39;I Forgot That You Existed&#39;, 2: &#39;Cruel Summer&#39;, 3: &#39;Lover&#39;, 4: &#39;The Man&#39;, 5: &#39;The Archer&#39;, 6: &#39;I Think He Knows&#39;, 7: &#39;Miss Americana &amp; The Heartbreak Prince&#39;, 8: &#39;Paper Rings&#39;, 9: &#39;Cornelia Street&#39;, 10: &#39;Death By A Thousand Cuts&#39;, 11: &#39;London Boy&#39;, 12: &#34;Soon You&#39;ll Get Better (feat. Dixie Chicks)&#34;, 13: &#39;False God&#39;, 14: &#39;You Need To Calm Down&#39;, 15: &#39;Afterglow&#39;, 16: &#39;Me! (feat. Brendon Urie of Panic! At The Disco)&#39;, 17: &#34;It&#39;s Nice To Have A Friend&#34;, 18: &#39;Daylight&#39;}
+{1: &#39;I Forgot That You Existed&#39;, 2: &#39;Cruel Summer&#39;, 3: &#39;Lover&#39;, 4: &#39;The Man&#39;, 5: &#39;The Archer&#39;, 6: &#39;I Think He Knows&#39;, 7: &#39;Miss Americana &amp; The Heartbreak Prince&#39;, 8: &#39;Paper Rings&#39;, 9: &#39;Cornelia Street&#39;, 10: &#39;Death By A Thousand Cuts&#39;, 11: &#39;London Boy&#39;, 12: &#34;Soon You&#39;ll Get Better (feat. Dixie Chicks)&#34;, 13: &#39;False God&#39;, 14: &#39;You Need To Calm Down&#39;, 15: &#39;Afterglow&#39;, 16: &#39;Me! (feat. Brendon Urie of Panic! At The Disco)&#39;, 17: &#34;It&#39;s Nice To Have A Friend&#34;, 18: &#39;Daylight&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -225,6 +268,21 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The Man
+The Man
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -235,10 +293,10 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lover_album</span><span class="p">[</span><span class="s2">&quot;producer&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Taylor Swift&#39;</span><span class="p">,</span> <span class="s1">&#39;Jack Antonoff&#39;</span><span class="p">,</span> <span class="s1">&#39;Joel Little&#39;</span><span class="p">,</span> <span class="s1">&#39;Taylor Swift&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis Bell&#39;</span><span class="p">,</span> <span class="s1">&#39;Frank Dukes&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lover_album</span><span class="p">[</span><span class="s2">&quot;producer&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;Taylor Swift&#39;</span><span class="p">,</span> <span class="s1">&#39;Jack Antonoff&#39;</span><span class="p">,</span> <span class="s1">&#39;Joel Little&#39;</span><span class="p">,</span> <span class="s1">&#39;Taylor Swift&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis Bell&#39;</span><span class="p">,</span> <span class="s1">&#39;Frank Dukes&#39;</span><span class="p">])</span>
 
 <span class="c1"># What can you change to make sure there are no duplicate producers?</span>
-<span class="c1">#</span>
+<span class="c1">#Use the set() function to remove any duplicates, only unique values</span>
 <span class="c1">#</span>
 
 <span class="c1"># Printing the dictionary</span>
@@ -246,6 +304,20 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;title&#39;: &#39;Lover&#39;, &#39;artist&#39;: &#39;Taylor Swift&#39;, &#39;year&#39;: 2019, &#39;genre&#39;: [&#39;Pop&#39;, &#39;Synth-pop&#39;], &#39;tracks&#39;: {1: &#39;I Forgot That You Existed&#39;, 2: &#39;Cruel Summer&#39;, 3: &#39;Lover&#39;, 4: &#39;The Man&#39;, 5: &#39;The Archer&#39;, 6: &#39;I Think He Knows&#39;, 7: &#39;Miss Americana &amp; The Heartbreak Prince&#39;, 8: &#39;Paper Rings&#39;, 9: &#39;Cornelia Street&#39;, 10: &#39;Death By A Thousand Cuts&#39;, 11: &#39;London Boy&#39;, 12: &#34;Soon You&#39;ll Get Better (feat. Dixie Chicks)&#34;, 13: &#39;False God&#39;, 14: &#39;You Need To Calm Down&#39;, 15: &#39;Afterglow&#39;, 16: &#39;Me! (feat. Brendon Urie of Panic! At The Disco)&#39;, 17: &#34;It&#39;s Nice To Have A Friend&#34;, 18: &#39;Daylight&#39;, 19: &#39;All Of The Girls You Loved Before&#39;}, &#39;producer&#39;: {&#39;Taylor Swift&#39;, &#39;Joel Little&#39;, &#39;Jack Antonoff&#39;, &#39;Louis Bell&#39;, &#39;Frank Dukes&#39;}}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -262,14 +334,29 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lover_album</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="mi">19</span><span class="p">:</span> <span class="s2">&quot;All Of The Girls You Loved Before&quot;</span><span class="p">})</span>
 
 <span class="c1"># How would add an additional genre to the dictionary, like electropop? </span>
+<span class="c1"># append to the list, use key to access</span>
 <span class="c1"># </span>
-<span class="c1"># </span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s2">&quot;genre&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Rap&quot;</span><span class="p">)</span>
 
 <span class="c1"># Printing the dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;title&#39;: &#39;Lover&#39;, &#39;artist&#39;: &#39;Taylor Swift&#39;, &#39;year&#39;: 2019, &#39;genre&#39;: [&#39;Pop&#39;, &#39;Synth-pop&#39;, &#39;Rap&#39;], &#39;tracks&#39;: {1: &#39;I Forgot That You Existed&#39;, 2: &#39;Cruel Summer&#39;, 3: &#39;Lover&#39;, 4: &#39;The Man&#39;, 5: &#39;The Archer&#39;, 6: &#39;I Think He Knows&#39;, 7: &#39;Miss Americana &amp; The Heartbreak Prince&#39;, 8: &#39;Paper Rings&#39;, 9: &#39;Cornelia Street&#39;, 10: &#39;Death By A Thousand Cuts&#39;, 11: &#39;London Boy&#39;, 12: &#34;Soon You&#39;ll Get Better (feat. Dixie Chicks)&#34;, 13: &#39;False God&#39;, 14: &#39;You Need To Calm Down&#39;, 15: &#39;Afterglow&#39;, 16: &#39;Me! (feat. Brendon Urie of Panic! At The Disco)&#39;, 17: &#34;It&#39;s Nice To Have A Friend&#34;, 18: &#39;Daylight&#39;, 19: &#39;All Of The Girls You Loved Before&#39;}, &#39;producer&#39;: {&#39;Taylor Swift&#39;, &#39;Joel Little&#39;, &#39;Jack Antonoff&#39;, &#39;Louis Bell&#39;, &#39;Frank Dukes&#39;}}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -287,11 +374,50 @@ window.onload = wrap_img;
     <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
 
 <span class="c1"># Write your own code to print tracks in readable format</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+<span class="n">tracks</span> <span class="o">=</span> <span class="n">lover_album</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">tracks</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>title: Lover
+artist: Taylor Swift
+year: 2019
+genre: [&#39;Pop&#39;, &#39;Synth-pop&#39;, &#39;Rap&#39;]
+tracks: {1: &#39;I Forgot That You Existed&#39;, 2: &#39;Cruel Summer&#39;, 3: &#39;Lover&#39;, 4: &#39;The Man&#39;, 5: &#39;The Archer&#39;, 6: &#39;I Think He Knows&#39;, 7: &#39;Miss Americana &amp; The Heartbreak Prince&#39;, 8: &#39;Paper Rings&#39;, 9: &#39;Cornelia Street&#39;, 10: &#39;Death By A Thousand Cuts&#39;, 11: &#39;London Boy&#39;, 12: &#34;Soon You&#39;ll Get Better (feat. Dixie Chicks)&#34;, 13: &#39;False God&#39;, 14: &#39;You Need To Calm Down&#39;, 15: &#39;Afterglow&#39;, 16: &#39;Me! (feat. Brendon Urie of Panic! At The Disco)&#39;, 17: &#34;It&#39;s Nice To Have A Friend&#34;, 18: &#39;Daylight&#39;, 19: &#39;All Of The Girls You Loved Before&#39;}
+producer: {&#39;Taylor Swift&#39;, &#39;Joel Little&#39;, &#39;Jack Antonoff&#39;, &#39;Louis Bell&#39;, &#39;Frank Dukes&#39;}
+1: I Forgot That You Existed
+2: Cruel Summer
+3: Lover
+4: The Man
+5: The Archer
+6: I Think He Knows
+7: Miss Americana &amp; The Heartbreak Prince
+8: Paper Rings
+9: Cornelia Street
+10: Death By A Thousand Cuts
+11: London Boy
+12: Soon You&#39;ll Get Better (feat. Dixie Chicks)
+13: False God
+14: You Need To Calm Down
+15: Afterglow
+16: Me! (feat. Brendon Urie of Panic! At The Disco)
+17: It&#39;s Nice To Have A Friend
+18: Daylight
+19: All Of The Girls You Loved Before
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -312,14 +438,36 @@ window.onload = wrap_img;
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
 
-<span class="n">search</span><span class="p">()</span>
+
 
 <span class="c1"># This is a very basic code segment, how can you improve upon this code?</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># could improve by giving options for what the user wants to know</span>
+
+<span class="k">def</span> <span class="nf">newsearch</span><span class="p">():</span>
+    <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What would you like to know about the album: title, artist, year, genre, or tracklist?&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid Search&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+
+<span class="n">newsearch</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2019
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -345,6 +493,175 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">music</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Rodeo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;album&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;artists&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Travis Scott&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2015</span><span class="p">,</span>
+        <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Hip-hop&quot;</span><span class="p">,</span> <span class="s2">&quot;Trap&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="mi">1</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Pornography&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+                <span class="p">},</span>
+            <span class="mi">2</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Oh My Dis Side&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Quavo&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">3</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;3500&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Future&quot;</span><span class="p">,</span> <span class="s2">&quot;2 Chainz&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">4</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Wasted&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Juicy J&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">5</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;90210&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Kacy Hill&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">6</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Pray 4 Love&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;The Weeknd&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">7</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Nightcrawler&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Swae Lee&quot;</span><span class="p">,</span> <span class="s2">&quot;Chief Keef&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">8</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Piss on Your Grave&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Kanye West&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">9</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Antidote&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+                <span class="p">},</span>
+            <span class="mi">10</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Impossible&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+                <span class="p">},</span>
+            <span class="mi">11</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Maria I&#39;m Drunk&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Young Thug&quot;</span><span class="p">,</span> <span class="s2">&quot;Justin Bieber&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">12</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Flying High&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Toro y Moi&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">13</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;I Can Tell&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+                <span class="p">},</span>
+            <span class="mi">14</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Apple Pie&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+                <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="mi">2</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;JACKBOYS&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;album&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;artists&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;JACKBOYS&quot;</span><span class="p">,</span> <span class="s2">&quot;Travis Scott&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2019</span><span class="p">,</span>
+        <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Hip-hop&quot;</span><span class="p">,</span> <span class="s2">&quot;Trap&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="mi">1</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;HIGHEST IN THE ROOM&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ROSALIA&quot;</span><span class="p">,</span> <span class="s2">&quot;Lil Baby&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">2</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;JACKBOYS&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[]</span>
+                <span class="p">},</span>
+            <span class="mi">3</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;GANG GANG&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Don Toliver&quot;</span><span class="p">,</span> <span class="s2">&quot;Sheck Wes&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">4</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;HAD ENOUGH&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Quavo&quot;</span><span class="p">,</span> <span class="s2">&quot;Offset&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">5</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;OUT WEST&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Young Thug&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">6</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;WHAT TO DO&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Don Toliver&quot;</span><span class="p">]</span>
+                <span class="p">},</span>
+            <span class="mi">7</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;GATTI&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Pop Smoke&quot;</span><span class="p">]</span>
+                <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="mi">3</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Lemonade&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;single&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;artists&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Internet Money&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2020</span><span class="p">,</span>
+        <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Hip-hop&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="mi">1</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;song&quot;</span><span class="p">:</span> <span class="s2">&quot;Lemonade&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Don Toliver&quot;</span><span class="p">,</span> <span class="s2">&quot;Nav&quot;</span><span class="p">,</span> <span class="s2">&quot;Gunna&quot;</span><span class="p">]</span>
+                <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">user</span><span class="p">():</span>
+    <span class="n">allmusic</span><span class="p">()</span>
+    <span class="n">ui</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Which do you want to learn about: type, artists, year, genre, or tracks&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">allmusic</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;all music titles:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">music</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">allinfo</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">music</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">music</span><span class="p">))</span>
+<span class="n">allinfo</span><span class="p">(</span><span class="s2">&quot;Rodeo&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;dict&#39;&gt;
+1
+2
+3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
