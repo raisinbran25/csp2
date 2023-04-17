@@ -13,6 +13,24 @@ week: 29
 ## Requirements
 > Work through College Board Unit 4... blog, add definitions, and pictures.  Be creative, for instance make a story of Computing and Networks that is related to your PBL experiences this year.
 
+The Internet:
+- A computing device is a physical artifact that can run a program. Some examples include computers, tablets, servers, routers, and smart sensors
+- A computing system is a group of computing devices and programs working together for a common purpose. 
+- A computer network is a group of interconnected computing devices capable of sending or receiving data. 
+- The Internet is a computer network consisting of interconnected networks that use standardized, open (nonproprietary) communication protocols. 
+
+Fault Tolerance:
+- The Internet has been engineered to be faulttolerant, with abstractions for routing and transmitting data 
+- Redundancy is the inclusion of extra components that can be used to mitigate failure of a system if other components fail.
+- When a system can support failures and still continue to function, it is called fault-tolerant.
+- This is important because elements of complex systems fail at unexpected times, often in groups, and fault tolerance allows users to continue to use the network.
+- The redundancy of routing options between two points increases the reliability of the Internet and helps it scale to more devices and more people.
+
+Parallel/Distributed Computing
+- Sequential computing is a computational model in which operations are performed in order one at a time.
+- Parallel computing is a computational model where the program is broken into multiple smaller sequential computing operations, some of which are performed simultaneously.
+- When increasing the use of parallel computing in a solution, the efficiency of the solution is still limited by the sequential portion. This
+means that at some point, adding parallel portions will no longer meaningfully increase efficiency.
 
 ### How a Computer Works
 > As we have learned, a computer needs aa program to do something smart.  The sequence of a program initiates a series of actions with the computers Central Processing Unit (CPU). This component is essentially a binary machine focussing on program instructions provided.  The CPU retrieives and stores the data it acts upon in Random Access Memory (RAM). Between the CPU, RAM, and Storage Devices a computer can work with many programs and large amounts of data.
