@@ -24,15 +24,15 @@ List specification of your Computer, or Computers if working as Pair/Trio
 - OS: Windows 11 Home
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
-- Input devices
-- Output devices
-- Program File
-- Program Code
-- Processes
-- Ports
-- Data File
-- Inspect Running Code
-- Inspect Variables
+- Input devices: hardware devices used to enter data or commands into a computer, like a keyboard, mouse, or scanner
+- Output devices: hardware, used to display or output data from a computer, like a monitor, printer, or speaker
+- Program File: contains executable instructions or code that can be run by a computer to perform specific tasks
+- Program Code: instructions written in a programming language that can be compiled or interpreted by a computer
+- Processes: instances of programs running on a computer that are managed by the operating system
+- Ports: physical or virtual communication channels through which data is transferred between a computer and other devices
+- Data File: contains data, such as text, images, or videos, which can be accessed and modified by programs
+- Inspect Running Code: examine the code of a program that is currently running in memory, like using debugging
+- Inspect Variables: examine the values of variables used by a program during its execution
 
 
 ![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
@@ -52,12 +52,12 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - Bandwidth is usually measured in bits per second
 
 - Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use `traceroute` and `ping` commands from Linux Terminal.  
-    - Path 
-    - Route
-    - Computer System
-    - Computer Device
-    - Bandwidth
-    - Computer Network
+    - Path: where a file is located, within folders and subfolders 
+    - Route: path that something (packet) travels over a network
+    - Computer System: system within the device (OS) like windows
+    - Computer Device: physical computing object, like a computer
+    - Bandwidth: how much data can be transferred across a path
+    - Computer Network: web of interconnected computers
 
 > Watch/review College Board Daily Video 4.1.2
 
@@ -114,14 +114,17 @@ The "network" layer is responsible for ***routing data packets between networks*
 > Watch both Daily videos for 4.2
 
 - Complete the network activity, summarize your understanding of fault tolerance.
+- fault tolerance is creating several connections or failsafes implemented in the case of machinery breaking down
 
 
 ### Parallel and Distributed Computing
 > Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
 - What is naturally Distributed in Frontend/Backend archeticture?  
+Tasks are distributed so that more machines are doing the same total work, but less each, to achieve a result quickly and efficiently.
 
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
+You can increase workers from 1 to 2 to allow two machines to do the work at the same time(parallel computing)
 
 
 > Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.
