@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -121,15 +121,15 @@ window.onload = wrap_img;
 
 <p>Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.</p>
 <ul>
-  <li>Input devices</li>
-  <li>Output devices</li>
-  <li>Program File</li>
-  <li>Program Code</li>
-  <li>Processes</li>
-  <li>Ports</li>
-  <li>Data File</li>
-  <li>Inspect Running Code</li>
-  <li>Inspect Variables</li>
+  <li>Input devices: hardware devices used to enter data or commands into a computer, like a keyboard, mouse, or scanner</li>
+  <li>Output devices: hardware, used to display or output data from a computer, like a monitor, printer, or speaker</li>
+  <li>Program File: contains executable instructions or code that can be run by a computer to perform specific tasks</li>
+  <li>Program Code: instructions written in a programming language that can be compiled or interpreted by a computer</li>
+  <li>Processes: instances of programs running on a computer that are managed by the operating system</li>
+  <li>Ports: physical or virtual communication channels through which data is transferred between a computer and other devices</li>
+  <li>Data File: contains data, such as text, images, or videos, which can be accessed and modified by programs</li>
+  <li>Inspect Running Code: examine the code of a program that is currently running in memory, like using debugging</li>
+  <li>Inspect Variables: examine the values of variables used by a program during its execution</li>
 </ul>
 
 <p><img src="/csp2/images/cpu.jpeg" alt="Computer Hardware"></p>
@@ -155,12 +155,12 @@ window.onload = wrap_img;
   </li>
   <li>Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use <code class="language-plaintext highlighter-rouge">traceroute</code> and <code class="language-plaintext highlighter-rouge">ping</code> commands from Linux Terminal.
     <ul>
-      <li>Path</li>
-      <li>Route</li>
-      <li>Computer System</li>
-      <li>Computer Device</li>
-      <li>Bandwidth</li>
-      <li>Computer Network</li>
+      <li>Path: where a file is located, within folders and subfolders</li>
+      <li>Route: path that something (packet) travels over a network</li>
+      <li>Computer System: system within the device (OS) like windows</li>
+      <li>Computer Device: physical computing object, like a computer</li>
+      <li>Bandwidth: how much data can be transferred across a path</li>
+      <li>Computer Network: web of interconnected computers</li>
     </ul>
   </li>
 </ul>
@@ -230,6 +230,7 @@ window.onload = wrap_img;
 
 <ul>
   <li>Complete the network activity, summarize your understanding of fault tolerance.</li>
+  <li>fault tolerance is creating several connections or failsafes implemented in the case of machinery breaking down</li>
 </ul>
 
 <h3 id="parallel-and-distributed-computing">
@@ -240,10 +241,12 @@ window.onload = wrap_img;
 
 <ul>
   <li>
-    <p>What is naturally Distributed in Frontend/Backend archeticture?</p>
+    <p>What is naturally Distributed in Frontend/Backend archeticture?<br>
+Tasks are distributed so that more machines are doing the same total work, but less each, to achieve a result quickly and efficiently.</p>
   </li>
   <li>
-    <p>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a></p>
+    <p>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a>
+You can increase workers from 1 to 2 to allow two machines to do the work at the same time(parallel computing)</p>
   </li>
 </ul>
 
