@@ -85,46 +85,29 @@ window.onload = wrap_img;
 <p>In 3-4 sentences, please explain the significance of virtual desktops and KASM. How can virtual desktops such as these be utilized in our AP CSP environment? (0.45)</p>
 <p>Virtual desktops are computers within computers. This is helpful because you can test or perform something that could otherwise be harmful to a real computer. It can be easily disposed of if something happens to it. A virtual desktop can be utilized in APCSP to test the abilities of a computer with specific hardware/software.</p>
 <p>Attempt to work through the KASM setup with your team. Attach two screenshots to show that you have successfully gone through the setup: The first screenshot of KASM generating your credentials, and the second screenshot of the KASM workspace once you have logged in. (0.45)</p>
-<p>add</p>
+<p>My credentials for aws are not working, so I could not attempt the KASM setup. However, I managed to set up a virtual kali linux desktop on my own, below is a screenshot.</p>
+<p><img src="https://raw.githubusercontent.com/raisinbran25/csp2/master/images/vm.JPG" alt="vm" /></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>AWS DATABASES HACKS: add</p>
+<p>AWS DATABASES HACKS:</p>
 <p>Quiz 1:</p>
 <p>What is the main difference between relational and non-relational databases?</p>
-<p>A. Relational databases are only used for structured data, while non-relational databases are only used for unstructured data.</p>
-<p>B. Relational databases can easily handle high data volumes, while non-relational databases cannot.</p>
 <p>C. Relational databases are based on tables and use SQL, while non-relational databases are based on collections and use JSON-like documents.</p>
-<p>D. Relational databases are more expensive than non-relational databases.</p>
 <p>Which AWS database service is best suited for applications that require low-latency speed?</p>
 <p>A. Amazon ElastiCache</p>
-<p>B. Amazon Neptune</p>
-<p>C. Amazon DocumentDB</p>
-<p>D. Amazon RDS</p>
 <p>What is the purpose of the code example provided in the lesson?</p>
-<p>A. To demonstrate how to create a table in Amazon Aurora.</p>
-<p>B. To show how to query data from a DynamoDB table.</p>
-<p>C. To provide an example of how to connect to a database instance in RDS using Python.</p>
 <p>D. To showcase how to insert data into a MySQL table.</p>
 <p>Quiz 2:</p>
 <p>Which of the following is not an AWS database option?</p>
-<p>A. Amazon RDS</p>
-<p>B. Amazon Neptune</p>
 <p>C. SQLite</p>
-<p>D. Amazon DynamoDB</p>
 <p>Which of the following is a file-based, lightweight RDBMS?</p>
 <p>A. Amazon RDS</p>
-<p>B. Amazon Neptune</p>
-<p>C Amazon DynamoDB</p>
-<p>D. SQLite</p>
 <p>Which AWS service enables you to store and query highly connected datasets?</p>
-<p>A. Amazon Relational Database Service (RDS)</p>
-<p>B. Amazon DynamoDB</p>
 <p>C. Amazon Neptune</p>
-<p>D. Amazon DocumentDB</p>
 
 </div>
 </div>
@@ -133,7 +116,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>DuckDNS and AWS HACKS:</p>
 <p>HACK 1: Create a diagram (Canva). What are the pros and cons of using DuckDNS? Show a diagram of an application running on AWS using a DuckDNS system.</p>
-<p>add</p>
+<p><img src="https://raw.githubusercontent.com/raisinbran25/csp2/master/images/duckdns.png" alt="duckdns" /></p>
 <p>HACK 2: Write a reflection. Why do we use DNS? How does DuckDNS work? What makes DuckDNS unique? How is DuckDNS useful for our projects? What are the steps to setup DuckDNS?</p>
 <p>We use DNS to make a website public instead of limiting it to a local website. It works by assigning a domain name to a dynamic ip address. DuckDNS is unique because it is free of cost. It is useful for our projects because it allows other people to access our project from their device. To set up DuckDNS, sign in with github, create a url, add ip, and create domain.</p>
 
@@ -144,7 +127,8 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>CERTBOT HACKS:</p>
 <p>Follow the instructions below and provide a full screenshot of all terminal commands after and including sudo certbot --apache all the way until it asks for the domain you want to secure. At this point you can take a screenshot and cancel the process. If you choose to continue the setup process and get Certbot fully working and show a before and after screenshot of your domain with http amd https connection we will grant extra credit points on hacks, or make up for lost points in other areas.</p>
-<p>add</p>
+<p>I had trouble trying to run the sudo apt-get install python3-certbot-apache command, below is the error.</p>
+<p><img src="https://raw.githubusercontent.com/raisinbran25/csp2/master/images/certbot.png" alt="certbot" /></p>
 <p>Research and compare the security features of OpenSSL and LibreSSL, and write about the recent vulnerabilities within it. Write about your research in a fastpages blog post. It can be the same post that has your screenshot for the Certbot Hacks.</p>
 <p>One recent vulnerability of OpenSSL I found was CVE-2023-0465. According to OpenSSL, "Applications that use a non-default option when verifying certificates may be vulnerable to an attack from a malicious CA to circumvent certain checks" because "Invalid certificate policies in leaf certificates are silently ignored by OpenSSL and other certificate policy checks are skipped for that certificate. A malicious CA could use this to deliberately assert invalid certificate policies in order to circumvent policy checking on the certificate altogether."</p>
 
