@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>binary calculator</title>
+  <link rel="stylesheet" href="./decimalbinary/style.css"/>
+</head>
+
+<body>
+    <p>enter two numbers and chooose an operator</p>
+
+    <input type="text" id="bin1" placeholder="number 1">
+    <input type="text" id="bin2" placeholder="number 2">
+    <button id="add" onclick="add()">add</button>
+    <button id="subtract" onclick="subtract()">subtract</button>
+    <button id="multiply" onclick="multiply()">multiply</button>
+    <button id="divide"onclick="divide()">divide</button>
+
+    <p id="binanswer"></p>
+    <p id="decanswer"></p>
+</body>
+
+</html>
+
+<script>
+
+    dec1 = 0
+    dec2 = 0
+
+    function update() {
+        dec1 = bintodec(document.getElementById("bin1").value)
+        dec2 = bintodec(document.getElementById("bin2").value)
+    }
+
+    function bintodec(bin) {
+        bin = String(bin)
+        i = bin.length - 1
+        p = 0
+        dec = 0
+        while (i >= 0) {
+            if (bin[i] == 1) {
+                dec += 2**p
+            }
+            p +=1
+            i -=1
+        }
+        return(dec)
+    }
+
+    function dectobin(dec) {
+        bin = ""
+        i = 0
+        while (2**i <=  dec) {
+            i += 1
+        }
+        while (i >= 0) {
+            if (dec % 2**i == dec) {
+                bin = bin + "0"
+                i -= 1
+            }
+            else {
+                bin = bin + "1"
+                dec -= 2**i
+                i -= 1
+            }
+        }
+        return(bin)
+    }
+
+    function add() {
+        update()
+        document.getElementById("decanswer").innerHTML = "answer: " + (dec1 + dec2)
+        document.getElementById("binanswer").innerHTML = "answer: " + dectobin(dec1 + dec2)
+    }
+
+    function subtract() {
+        update()
+        document.getElementById("decanswer").innerHTML = "answer: " + (dec1 - dec2)
+        document.getElementById("binanswer").innerHTML = "answer: " + dectobin(dec1 - dec2)
+    }
+
+    function multiply() {
+        update()
+        document.getElementById("decanswer").innerHTML = "answer: " + (dec1 * dec2)
+        document.getElementById("binanswer").innerHTML = "answer: " + dectobin(dec1 * dec2)
+    }
+
+    function divide() {
+        update()
+        remainder = dec1 % dec2
+        answer = (dec1 - remainder) / dec2
+        document.getElementById("decanswer").innerHTML = "answer: " + answer + ", remainder: " + remainder
+        document.getElementById("binanswer").innerHTML = "answer: " + dectobin(answer) + ", remainder: " + dectobin(remainder)
+    }
+
+</script>
