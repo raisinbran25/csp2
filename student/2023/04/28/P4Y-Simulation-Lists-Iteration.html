@@ -233,7 +233,7 @@ window.onload = wrap_img;
 </li>
 </ul>
 <h3 id="What-are-Lists?">What are Lists?<a class="anchor-link" href="#What-are-Lists?"> </a></h3><ul>
-<li>Lists are <mark>_________________</mark>.</li>
+<li>Lists are <mark>groups of values</mark>.</li>
 <li>Each sequence is demarcated with an <mark>index</mark>, starting from 0. This is known as <mark>base 0 indexing</mark></li>
 <li>In memory, it is stored as a variable name with multiple pointers to each variable stored in a certain order</li>
 <li>Lists can also be called arrays</li>
@@ -252,7 +252,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Iteration">Iteration<a class="anchor-link" href="#Iteration"> </a></h2><p>Iterative statements are also called <mark>_____</mark>, and they repeat themselves over and over until the condition for stopping is met.</p>
+<h2 id="Iteration">Iteration<a class="anchor-link" href="#Iteration"> </a></h2><p>Iterative statements are also called <mark>loops</mark>, and they repeat themselves over and over until the condition for stopping is met.</p>
 <ul>
 <li>In College Board's Pseudocode, the first is a REPEAT n TIMES loop, where the n represents some number.</li>
 </ul>
@@ -303,7 +303,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries"> </a></h2><h3 id="What-are-Dictionaries?">What are Dictionaries?<a class="anchor-link" href="#What-are-Dictionaries?"> </a></h3><ul>
-<li>an unordered collection of key-value pairs, where each key is <mark>_______</mark> and associated with a specific value</li>
+<li>an unordered collection of key-value pairs, where each key is <mark>unique</mark> and associated with a specific value</li>
 <li>known as associative arrays, maps, or hash tables in some programming languages</li>
 <li>used to store and retrieve data efficiently, as they allow fast access to values based on their associated keys</li>
 <li>useful for a wide range of tasks, such as storing, indexing, and counting</li>
@@ -716,6 +716,13 @@ track #17: the lakes
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="dictionary/list-sorting-algorithm">dictionary/list sorting algorithm<a class="anchor-link" href="#dictionary/list-sorting-algorithm"> </a></h2><p>The below program checks if a word starts with a value to determine whether to use "a" or "an" before the word.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -723,22 +730,67 @@ track #17: the lakes
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ages</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;Jaden&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;greeting&quot;</span><span class="p">,</span> <span class="s2">&quot;ocean&quot;</span><span class="p">,</span> <span class="s2">&quot;table&quot;</span><span class="p">,</span> <span class="s2">&quot;computer&quot;</span><span class="p">,</span> <span class="s2">&quot;elephant&quot;</span><span class="p">,</span> <span class="s2">&quot;game&quot;</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">an</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="p">}</span>
+<span class="k">def</span> <span class="nf">vowelcheck</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">vowels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;i&quot;</span><span class="p">,</span><span class="s2">&quot;o&quot;</span><span class="p">,</span><span class="s2">&quot;u&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">vowel</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">vowel</span> <span class="o">==</span> <span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">an</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">return</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">sort</span><span class="p">():</span>
-    <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">ages</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="n">vowelcheck</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;words to use &#39;a&#39; with:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;words to use &#39;an&#39; with:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">an</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>words to use &#39;a&#39; with:
+[&#39;greeting&#39;, &#39;table&#39;, &#39;computer&#39;, &#39;game&#39;]
+words to use &#39;an&#39; with:
+[&#39;ocean&#39;, &#39;elephant&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="simulation">simulation<a class="anchor-link" href="#simulation"> </a></h2><p>i created a simulation to simuluate gambling with a coin flip. If the coin lands on heads, the amount of money you bet doubles, but if the coin lands on tails, you lose all of your money. I added ui/html/sass to my game, so i think i deservethe extra 0.1. This can be applicable in the real world to recovering gambling addicts because they are not actually winning or losing real money. Furthermore, if they lose enough times, they will realize the dangers of gambling and quit for good.</p>
+<p><a href="https://raisinbran25.github.io/csp2/simulator/">link</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Kahoot-score/exam-preparation">Kahoot score/exam preparation<a class="anchor-link" href="#Kahoot-score/exam-preparation"> </a></h2><p>i got 10/10 on the kahoot<br />
+to study for the ap exam, i will look at my previous practice exams and what questions i got wrong. additionally, i will use quizlet to study specific terms.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 

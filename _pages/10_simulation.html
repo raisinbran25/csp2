@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coin Flip Gambling Game</title>
+	<link rel="stylesheet" href="./simulation/style.css"/>
+  </head>
+  <body>
+    <h1>Coin Flip Gambling Game</h1>
+    <p>Enter the amount of money you want to bet:</p>
+    <input type="number" id="betAmount" min="1">
+    <br>
+    <br>
+    <button onclick="flipCoin()">Flip Coin</button>
+    <br>
+    <br>
+    <p id="result"></p>
+    <p id="money"></p>
+
+    <script>
+      let money = 100; // starting amount of money
+      let resultElement = document.getElementById("result");
+      let moneyElement = document.getElementById("money");
+
+      function flipCoin() {
+        let betAmount = parseInt(document.getElementById("betAmount").value);
+        if (isNaN(betAmount) || betAmount <= 0 || betAmount > money) {
+          resultElement.innerText = "Invalid bet amount.";
+          return;
+        }
+
+        // randomly generate a 0 or 1, representing heads or tails
+        let coin = Math.floor(Math.random() * 2);
+
+        if (coin === 0) {
+          money += betAmount; // win
+          resultElement.innerText = "You guessed heads and won!";
+        } else {
+          money -= betAmount; // lose
+          resultElement.innerText = "You guessed tails and lost!";
+        }
+
+        moneyElement.innerText = `Money: $${money}`;
+        if (money <= 0) {
+          alert("Game over. You're out of money!");
+        }
+      }
+    </script>
+  </body>
+</html>
