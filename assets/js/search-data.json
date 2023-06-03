@@ -887,6 +887,17 @@
   
 
   
+      ,"page11": {
+          "title": "ascii",
+          "content": "Play",
+          "url": "https://raisinbran25.github.io/csp2/ascii/",
+          "relUrl": "/ascii/",
+          "date": ""
+      }
+      
+  
+
+  
 
   
 
@@ -897,7 +908,7 @@
   
 
   
-      ,"page15": {
+      ,"page16": {
           "title": "test",
           "content": "Database API . name score . Create API . name: . score: . Create .",
           "url": "https://raisinbran25.github.io/csp2/_pages/test.html",
@@ -928,7 +939,7 @@
   
 
   
-      ,"page24": {
+      ,"page25": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://raisinbran25.github.io/csp2/robots.txt",
