@@ -1,0 +1,294 @@
+
+<div>
+    <button id="button" onclick="play()">Play</button>
+    <div id="text"></div>
+</div>
+<div>
+    <div class="container" id="box"></div>
+    <link rel="stylesheet" href="sass/ascii.css">
+</div>
+
+<script>
+
+score = 0
+chunks = [
+    [5,6,7,4],
+    [16,15,6,5],
+    [15,16,14,4],
+    [15,16,14,6],
+    [15,14,6,5],
+    [15,16,14,5],
+    [15,16,5,4]
+]
+
+mobile = []
+stone = []
+
+function bubble(list) {
+    var newlist = list.slice();
+    while (true) {
+        swap = 0
+        i = 0
+        for (i = 0; i < newlist.length; i++) {
+            if (newlist[i] < newlist[i + 1]) {
+                temp = newlist[i]
+                newlist[i] = newlist[i + 1]
+                newlist[i + 1] = temp
+                swap += 1
+            }
+        }
+        if (swap == 0) {
+            return newlist
+        }
+    }
+}
+
+function findmatch(val, list) {
+    found = null
+    for (let i = 0; i < list.length; i++) {
+        if (val == list[i]) {
+            found = true;
+        }
+    }
+    if (found) {
+        return true
+    }
+    return false;
+}
+
+const container = document.querySelector('.container');
+
+function initialize() {
+    document.getElementById("button").remove()
+    document.getElementById("box").style.display = "grid"
+    for (let i = 0; i < 200; i++) {
+        const cell = document.createElement('div');
+        const cellId = "c" + String(i + 1); // Generate a unique ID for each cell
+        cell.id = cellId; // Set the ID of the cell
+        cell.innerHTML = ""
+        cell.classList.add('cell');
+        container.appendChild(cell);
+    }
+}
+
+function spawn() {
+    chunk = chunks[Math.floor(Math.random() * chunks.length)]
+    
+    a = 0
+    while (a < chunk.length) {
+        mobile.push(chunk[a])
+        square = document.getElementById("c" + String(chunk[a]))
+        square.innerHTML = "0"
+        a += 1
+    }
+}
+
+function left() {
+    for (let i = 0; i < mobile.length; i++) {
+        lef = document.getElementById("c" + String(mobile[i] - 1))
+        if (mobile[i] % 10 == 1) {
+            return
+        }
+        else if (lef.innerHTML == "0") {
+            if (!findmatch((mobile[i] - 1), mobile)) { //if under isnt mobile
+                return
+            }
+        }
+    }
+    for (let i = 0; i < mobile.length; i++) {
+        document.getElementById("c" + String(mobile[i])).innerHTML = ""
+        mobile[i] = mobile[i] - 1
+    }
+    for (let i = 0; i < mobile.length; i++) {
+        document.getElementById("c" + String(mobile[i])).innerHTML = "0"
+    }
+}
+
+function right() {
+    for (let i = 0; i < mobile.length; i++) {
+        rig = document.getElementById("c" + String(mobile[i] + 1))
+        if (mobile[i] % 10 == 0) {
+            return
+        }
+        else if (rig.innerHTML == "0") {
+            if (!findmatch((mobile[i] + 1), mobile)) { //if under isnt mobile
+                return
+            }
+        }
+    }
+    for (let i = 0; i < mobile.length; i++) {
+        document.getElementById("c" + String(mobile[i])).innerHTML = ""
+        mobile[i] = mobile[i] + 1
+    }
+    for (let i = 0; i < mobile.length; i++) {
+        document.getElementById("c" + String(mobile[i])).innerHTML = "0"
+    }
+}
+
+function up() {
+    rotate()
+}
+
+function rotate() {
+    if (mobile[0] % 10 < 2  || mobile[0] % 10 > 8) {
+        return
+    }
+    sqr = []
+    smob = bubble(mobile)
+    if (smob[0] - smob[2] == 10 && smob[1] - smob[3] == 10 && smob[1] - smob[2] != 1) { //2x2 case
+        return
+    }
+    else if (smob[0] - smob[1] == smob[1] - smob[2] && smob[1] - smob[2] == smob[2] - smob[3]) { //1 x 4 case
+        if (document.getElementById("c" + String(mobile[0] + 1)).innerHTML == "0") {
+            while (mobile.length > 1) {
+                document.getElementById("c" + String(mobile[1])).innerHTML = ""
+                mobile.splice(1, 1)
+            }
+            mobile.push(mobile[0] - 10)
+            mobile.push(mobile[0] + 10)
+            mobile.push(mobile[0] + 20)
+            for (i = 1; i < mobile.length; i++) {
+                document.getElementById("c" + String(mobile[i])).innerHTML = "0"
+            }
+        }
+        else {
+            while (mobile.length > 1) {
+                document.getElementById("c" + String(mobile[1])).innerHTML = ""
+                mobile.splice(1, 1)
+            }
+            mobile.push(mobile[0] - 1)
+            mobile.push(mobile[0] + 1)
+            mobile.push(mobile[0] + 2)
+            for (i = 1; i < mobile.length; i++) {
+                document.getElementById("c" + String(mobile[i])).innerHTML = "0"
+            }
+        }
+        return
+    }
+    else {
+        sqr.push(mobile[0] - 11)
+        sqr.push(mobile[0] - 10)
+        sqr.push(mobile[0] - 9)
+        sqr.push(mobile[0] + 1)
+        sqr.push(mobile[0] + 11)
+        sqr.push(mobile[0] + 10)
+        sqr.push(mobile[0] + 9)
+        sqr.push(mobile[0] - 1)
+
+        for (i = 1; i < 4; i++) {
+            document.getElementById('c' + String(mobile[i])).innerHTML = ""
+            revd = sqr.indexOf(mobile[i]) - 2
+            if (revd < 0) {
+                revd += 8
+            }
+            mobile[i] = sqr[revd]
+        }
+        for (i = 1; i < mobile.length; i ++) {
+            document.getElementById('c' + String(mobile[i])).innerHTML = "0"
+        }
+    }
+}
+
+function drop() {
+    i = 0
+    while (i < mobile.length) {
+        und = document.getElementById("c" + String(mobile[i] + 10))
+        if (mobile[i] + 10 > 200) { // if a block is touching the ground
+            mobile = []
+            return
+        }
+        else if (und.innerHTML == "0") { //if block under is 0
+            if (!findmatch((mobile[i] + 10), mobile)) { //if under isnt mobile
+                mobile = []
+                return
+            }
+        }
+        i += 1
+    }
+
+    j = 0
+    while (j < mobile.length) {
+        document.getElementById("c" + String(mobile[j])).innerHTML = ""
+        mobile[j] = mobile[j] + 10
+        j += 1
+    }
+    k = 0
+    while (k < mobile.length) {
+        document.getElementById("c" + mobile[k]).innerHTML = "0"
+        k += 1
+    }
+}
+
+function linecheck() {
+    rem = []
+    for (i = 0; i < 20; i++) {
+        current = true
+        for (j = 1; j < 11; j++) {
+            if (document.getElementById('c' + String(((i * 10) + j))).innerHTML != "0") {
+                current = false
+            }
+        }
+        if (current) {
+            rem.push(i)
+        }
+    }
+    while (rem.length > 0) {
+        score += 1
+        mobile = []
+        for (j = (rem[0] * 10) + 9; j > 10; j--) {
+            document.getElementById("c" + String(j)).innerHTML = document.getElementById("c" + String(j - 10)).innerHTML
+        }
+        rem.splice(0, 1)
+        for (i = 0; i > rem.length; i++) {
+            rem[i] = rem[i] + 1
+        }
+    }
+}
+
+function endcheck() {
+    for (i = 1; i < 11; i++) {
+        if (document.getElementById("c" + String(i)).innerHTML == "0") {
+            return true
+        }
+    }
+    return false
+}
+
+function end() {
+    document.getElementById("text").innerHTML = "game over"
+}
+
+function play() {
+    initialize()
+    setInterval(function () {
+        if (mobile.length > 0) {
+            drop()
+        }
+        else {
+            if (endcheck()) {
+                end()
+                return
+            }
+            linecheck()
+            spawn()
+        }
+    }, 500); // Repeat every 1 second
+}
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === "ArrowLeft") {
+    left();
+  }
+  else if (event.key == 'ArrowRight') {
+    right()
+  }
+  else if (event.key === 'ArrowDown') {
+    drop()
+  }
+  else if (event.key == 'ArrowUp') {
+    rotate()
+  }
+});
+
+</script>
+  

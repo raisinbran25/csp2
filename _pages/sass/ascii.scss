@@ -1,0 +1,44 @@
+.container {
+  width: 300px;
+  height: 600px;
+  border: 1px solid black;
+  display: none;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(20, 30px);
+  margin: 0 auto; /* Center the container horizontally */
+  align-items: center; /* Center the container vertically */
+  justify-content: center;
+
+  .cell {
+    width: 30px;
+    height: 30px;
+    border: 0px solid black;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+  }
+
+}
+
+#button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px color black;
+  background-color: #1f446c;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
